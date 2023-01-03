@@ -57,7 +57,7 @@ services:
     image: bobo91280/apigw:latest
     container_name: apigw
     ports:
-      - "8083:8083"
+      - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     networks:
@@ -69,7 +69,7 @@ services:
     image: bobo91280/customer:latest
     container_name: customer
     ports:
-      - "8080:8080"
+      - "8081:8081"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     networks:
@@ -84,7 +84,7 @@ services:
     image: bobo91280/fraud:latest
     container_name: fraud
     ports:
-      - "8081:8081"
+      - "8082:8082"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     networks:
@@ -99,7 +99,22 @@ services:
     image: bobo91280/notification:latest
     container_name: notification
     ports:
-      - "8082:8082"
+      - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+      - eureka-server
+  auth:
+    image: bobo91280/auth:latest
+    container_name: auth
+    ports:
+      - "8084:8084"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     networks:

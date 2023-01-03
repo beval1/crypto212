@@ -1,5 +1,5 @@
 server:
-    port: 8083
+    port: 8080
 
 spring:
     application:
@@ -13,6 +13,10 @@ spring:
               uri: lb://CUSTOMER
               predicates:
                 - Path=/api/v1/customers/**
+            - id: auth
+              uri: lb://AUTH
+              predicates:
+                - Path=/api/v1/auth/**
 
 eureka:
     client:

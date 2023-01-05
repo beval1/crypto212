@@ -46,25 +46,25 @@ public class PostgresUserRepository implements UserRepository {
     }
 
     @Override
-    public UserEntity createUser(UserEntity userEntity) {
+    public UserEntity createUser(String username, String email, String password, boolean enabled, boolean locked,
+                                 boolean accountExpired, boolean credentialsExpired, Set<RoleEntity> roles) {
         return txTemplate.execute(status -> {
             long snowFlakeId = snowFlake.nextId();
-            userEntity.setId(snowFlakeId);
             jdbc.update(conn -> {
                 PreparedStatement ps = conn.prepareStatement(
                         Queries.INSERT_USER);
-                ps.setLong(1, userEntity.getId());
-                ps.setString(2, userEntity.getUsername());
-                ps.setString(3, userEntity.getEmail());
-                ps.setString(4, userEntity.getPassword());
-                ps.setBoolean(5, userEntity.isEnabled());
-                ps.setBoolean(6, userEntity.isLocked());
-                ps.setBoolean(7, userEntity.isAccountExpired());
-                ps.setBoolean(8, userEntity.isCredentialsExpired());
+                ps.setLong(1, snowFlakeId);
+                ps.setString(2, username);
+                ps.setString(3, email);
+                ps.setString(4, password);
+                ps.setBoolean(5, enabled);
+                ps.setBoolean(6, locked);
+                ps.setBoolean(7, accountExpired);
+                ps.setBoolean(8, credentialsExpired);
                 return ps;
             });
 
-            for (RoleEntity role : userEntity.getRoles()) {
+            for (RoleEntity role : roles) {
                 jdbc.update(conn -> {
                     PreparedStatement ps = conn.prepareStatement(
                             Queries.INSERT_USER_ROLE);
@@ -74,7 +74,16 @@ public class PostgresUserRepository implements UserRepository {
                 });
             }
 
-            return userEntity;
+            return UserEntity.builder()
+                    .id(snowFlakeId)
+                    .username(username)
+                    .email(email)
+                    .password(password)
+                    .enabled(enabled)
+                    .locked(locked)
+                    .accountExpired(accountExpired)
+                    .credentialsExpired(credentialsExpired)
+                    .build();
         });
     }
 
@@ -100,8 +109,10 @@ public class PostgresUserRepository implements UserRepository {
 
     static class Queries {
         private Queries() {}
-        public static final String GET_USER_BY_USERNAME = "SELECT * FROM users WHERE username = ?";
-        public static final String GET_USER_BY_EMAIL = "SELECT * FROM users WHERE email = ?";
+        public static final String GET_USER_BY_USERNAME = "SELECT id, username, pass, email, account_enabled, " +
+                "account_locked, account_expired, credentials_expired FROM users WHERE username = ?";
+        public static final String GET_USER_BY_EMAIL = "SELECT id, username, pass, email, account_enabled, " +
+                "account_locked, account_expired, credentials_expired FROM users WHERE email = ?";
         public static final String INSERT_USER = "INSERT INTO users(id, username, email, pass, account_enabled, " +
                 "account_locked, account_expired, credentials_expired) VALUES (?,?,?,?,?,?,?,?)";
         public static final String INSERT_USER_ROLE = "INSERT INTO users_roles(user_id, role_id) VALUES (?,?)";

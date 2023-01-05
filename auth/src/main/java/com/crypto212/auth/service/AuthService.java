@@ -71,6 +71,7 @@ public class AuthService {
         user.setAccountExpired(false);
         user.setCredentialsExpired(false);
 
-        userRepository.createUser(user);
+        userRepository.createUser(user.getUsername(), user.getEmail(), user.getPassword(), user.isEnabled(),
+                user.isLocked(), user.isAccountExpired(),  user.isCredentialsExpired(), user.getRoles());
     }
 }

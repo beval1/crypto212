@@ -1,12 +1,17 @@
+app:
+  jwtExpirationMs: 60000000
+  jwtSecret: ${JWT_SECRET_KEY}
 server:
   port: 8084
 spring:
   application:
     name: auth
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/auth
+    username: amigoscode
   zipkin:
     base-url: http://zipkin:9411
-  rabbitmq:
-    addresses: rabbitmq:5672
 eureka:
   client:
     service-url:
@@ -14,5 +19,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     enabled: true
+snowflake:
+  workerId: 1
 
 

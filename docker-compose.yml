@@ -117,6 +117,7 @@ services:
       - "8084:8084"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+      - JWT_SECRET_KEY=6jCTFSacGgVfffoK/c/DQg4z0848R9a71acEiKgjozs=
     networks:
       - spring
       - postgres

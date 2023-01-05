@@ -1,19 +1,35 @@
+app:
+  jwtExpirationMs: 60000000
+  jwtSecret: ${JWT_SECRET_KEY}
 server:
   port: 8084
 spring:
   application:
     name: auth
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/auth
+    username: amigoscode
+    driver-class-name: org.postgresql.Driver
   zipkin:
-    base-url: http://zipkin:9411
-  rabbitmq:
-    addresses: rabbitmq:5672
+    base-url: http://localhost:9411
+#  flyway:
+#    url: jdbc:postgresql://localhost:5432
+#    schemas: auth
+#    password: password
+#    user: amigoscode
+#    create-schemas: true
+#    default-schema: auth
+#    driver-class-name: org.postgresql.Driver
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     fetch-registry: true
     register-with-eureka: true
-    enabled: true
+    enabled: false
+snowflake:
+  workerId: 1
 
 
 

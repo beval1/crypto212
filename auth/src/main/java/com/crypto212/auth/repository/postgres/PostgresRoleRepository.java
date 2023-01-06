@@ -3,7 +3,7 @@ package com.crypto212.auth.repository.postgres;
 import com.crypto212.auth.repository.RoleRepository;
 import com.crypto212.auth.repository.entity.RoleEntity;
 import com.crypto212.auth.repository.entity.RoleEnum;
-import com.crypto212.clients.idgenerator.SnowFlake;
+import com.crypto212.idgenerator.SnowFlake;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

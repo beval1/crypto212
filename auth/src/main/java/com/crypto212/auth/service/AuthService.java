@@ -1,5 +1,6 @@
 package com.crypto212.auth.service;
 
+import com.crypto212.auth.exception.ApiException;
 import com.crypto212.auth.exception.RoleNotFoundException;
 import com.crypto212.auth.exception.UserAlreadyExistsException;
 import com.crypto212.auth.repository.RoleRepository;
@@ -10,6 +11,8 @@ import com.crypto212.auth.repository.entity.UserEntity;
 import com.crypto212.auth.security.JwtTokenProvider;
 import com.crypto212.auth.web.dto.payload.SigninDTO;
 import com.crypto212.auth.web.dto.payload.SignupDTO;
+import com.crypto212.clients.auth.JwtTokenClaims;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,6 +24,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Slf4j
 @Service
 public class AuthService {
     private final ModelMapper modelMapper;
@@ -73,5 +77,16 @@ public class AuthService {
 
         userRepository.createUser(user.getUsername(), user.getEmail(), user.getPassword(), user.isEnabled(),
                 user.isLocked(), user.isAccountExpired(),  user.isCredentialsExpired(), user.getRoles());
+    }
+
+    public JwtTokenClaims getTokenClaims(String authHeader) {
+        String token = authHeader.substring(7);
+        if (!jwtTokenProvider.validateJwtToken(token)){
+            log.info(authHeader);
+            throw new ApiException(HttpStatus.BAD_REQUEST, "Invalid Jwt Token");
+        }
+
+        return new JwtTokenClaims(jwtTokenProvider.getRolesFromJwtToken(token),
+                jwtTokenProvider.getUserIdFromJwtToken(token));
     }
 }

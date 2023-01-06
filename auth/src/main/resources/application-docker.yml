@@ -8,10 +8,12 @@ spring:
     name: auth
   datasource:
     password: password
-    url: jdbc:postgresql://localhost:5432/auth
+    url: jdbc:postgresql://postgres:5432/auth
     username: amigoscode
   zipkin:
     base-url: http://zipkin:9411
+#  flyway:
+#      url: jdbc:postgresql://postgres:5432
 eureka:
   client:
     service-url:

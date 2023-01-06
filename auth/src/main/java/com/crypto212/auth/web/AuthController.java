@@ -4,13 +4,11 @@ import com.crypto212.auth.service.AuthService;
 import com.crypto212.auth.web.dto.payload.SigninDTO;
 import com.crypto212.auth.web.dto.payload.SignupDTO;
 import com.crypto212.auth.web.dto.response.JwtResponseDTO;
-import com.crypto212.clients.shared.ResponseDTO;
+import com.crypto212.clients.auth.JwtTokenClaims;
+import com.crypto212.shared.dto.ResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -54,6 +52,21 @@ public class AuthController {
                                 .builder()
                                 .message("Signed up successfully!")
                                 .content(null)
+                                .build()
+                );
+    }
+
+    @GetMapping("/token-claims")
+    public ResponseEntity<ResponseDTO> getTokenClaims(@RequestHeader(name = "Authorization") String authHeader) {
+        JwtTokenClaims jwtTokenClaims = authService.getTokenClaims(authHeader);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(
+                        ResponseDTO
+                                .builder()
+                                .message("Token claims fetched successfully!")
+                                .content(jwtTokenClaims)
                                 .build()
                 );
     }

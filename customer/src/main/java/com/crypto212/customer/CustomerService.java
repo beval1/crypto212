@@ -4,16 +4,22 @@ import com.crypto212.amqp.RabbitMQMessageProducer;
 import com.crypto212.clients.fraud.FraudCheckResponse;
 import com.crypto212.clients.fraud.FraudClient;
 import com.crypto212.clients.notification.NotificationRequest;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
-    private final FraudClient fraudClient;
     private final RabbitMQMessageProducer rabbitMQMessageProducer;
+    private final FraudClient fraudClient;
+
+    public CustomerService(CustomerRepository customerRepository, RabbitMQMessageProducer rabbitMQMessageProducer,
+                           FraudClient fraudClient) {
+        this.customerRepository = customerRepository;
+        this.rabbitMQMessageProducer = rabbitMQMessageProducer;
+        this.fraudClient = fraudClient;
+    }
+
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()

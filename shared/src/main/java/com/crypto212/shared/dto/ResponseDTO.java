@@ -1,4 +1,4 @@
-package com.crypto212.clients.shared;
+package com.crypto212.shared.dto;
 
 import lombok.*;
 

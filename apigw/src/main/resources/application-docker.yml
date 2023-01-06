@@ -13,6 +13,8 @@ spring:
               uri: lb://CUSTOMER
               predicates:
                 - Path=/api/v1/customers/**
+              filters:
+                - name: JwtAuthenticationFilter
             - id: auth
               uri: lb://AUTH
               predicates:

@@ -1,6 +1,6 @@
 package com.crypto212.auth.config;
 
-import com.crypto212.clients.idgenerator.SnowFlake;
+import com.crypto212.idgenerator.SnowFlake;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

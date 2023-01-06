@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySources;
 @SpringBootApplication(
         scanBasePackages = {
                 "com.crypto212.customer",
-                "com.crypto212.amqp",
+                "com.crypto212.amqp"
         }
 )
 @EnableEurekaClient

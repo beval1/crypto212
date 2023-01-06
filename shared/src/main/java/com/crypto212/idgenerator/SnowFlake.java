@@ -1,4 +1,4 @@
-package com.crypto212.clients.idgenerator;
+package com.crypto212.idgenerator;
 
 import java.util.concurrent.atomic.AtomicLong;
 

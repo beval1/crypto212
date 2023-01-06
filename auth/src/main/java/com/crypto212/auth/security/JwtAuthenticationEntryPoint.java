@@ -1,6 +1,6 @@
 package com.crypto212.auth.security;
 
-import com.crypto212.clients.shared.ResponseDTO;
+import com.crypto212.shared.dto.ResponseDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.AuthenticationException;

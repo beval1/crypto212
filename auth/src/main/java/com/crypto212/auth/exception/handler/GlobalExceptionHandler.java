@@ -1,7 +1,7 @@
 package com.crypto212.auth.exception.handler;
 
 import com.crypto212.auth.exception.ApiException;
-import com.crypto212.clients.shared.ResponseDTO;
+import com.crypto212.shared.dto.ResponseDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

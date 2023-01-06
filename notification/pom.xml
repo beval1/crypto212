@@ -72,7 +72,7 @@
         </dependency>
         <dependency>
             <groupId>com.crypto212</groupId>
-            <artifactId>clients</artifactId>
+            <artifactId>shared</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

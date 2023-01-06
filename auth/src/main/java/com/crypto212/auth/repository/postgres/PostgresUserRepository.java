@@ -4,7 +4,7 @@ import com.crypto212.auth.repository.RoleRepository;
 import com.crypto212.auth.repository.UserRepository;
 import com.crypto212.auth.repository.entity.RoleEntity;
 import com.crypto212.auth.repository.entity.UserEntity;
-import com.crypto212.clients.idgenerator.SnowFlake;
+import com.crypto212.idgenerator.SnowFlake;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;

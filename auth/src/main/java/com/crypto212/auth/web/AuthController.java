@@ -1,17 +1,19 @@
 package com.crypto212.auth.web;
 
 import com.crypto212.auth.service.AuthService;
-import com.crypto212.auth.web.dto.payload.SigninDTO;
-import com.crypto212.auth.web.dto.payload.SignupDTO;
-import com.crypto212.auth.web.dto.response.JwtResponseDTO;
+import com.crypto212.auth.service.dto.payload.SigninDTO;
+import com.crypto212.auth.service.dto.payload.SignupDTO;
+import com.crypto212.auth.service.dto.response.JwtResponseDTO;
 import com.crypto212.clients.auth.JwtTokenClaims;
 import com.crypto212.shared.dto.ResponseDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@Slf4j
 @RestController
 @RequestMapping("api/v1/auth")
 public class AuthController {
@@ -57,8 +59,8 @@ public class AuthController {
     }
 
     @GetMapping("/token-claims")
-    public ResponseEntity<ResponseDTO> getTokenClaims(@RequestHeader(name = "Authorization") String authHeader) {
-        JwtTokenClaims jwtTokenClaims = authService.getTokenClaims(authHeader);
+    public ResponseEntity<ResponseDTO> getTokenClaims(@RequestHeader("X-Auth-Token") String authToken) {
+        JwtTokenClaims jwtTokenClaims = authService.getTokenClaims(authToken);
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)

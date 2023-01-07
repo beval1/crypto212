@@ -1,4 +1,4 @@
-package com.crypto212.auth.web.dto.payload;
+package com.crypto212.auth.service.dto.payload;
 
 import com.crypto212.auth.util.validators.EmailValidator;
 import com.crypto212.auth.util.validators.UserUsernameValidator;

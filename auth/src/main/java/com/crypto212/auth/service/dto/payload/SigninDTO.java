@@ -1,4 +1,4 @@
-package com.crypto212.auth.web.dto.payload;
+package com.crypto212.auth.service.dto.payload;
 
 
 import lombok.*;

@@ -9,8 +9,8 @@ import com.crypto212.auth.repository.entity.RoleEntity;
 import com.crypto212.auth.repository.entity.RoleEnum;
 import com.crypto212.auth.repository.entity.UserEntity;
 import com.crypto212.auth.security.JwtTokenProvider;
-import com.crypto212.auth.web.dto.payload.SigninDTO;
-import com.crypto212.auth.web.dto.payload.SignupDTO;
+import com.crypto212.auth.service.dto.payload.SigninDTO;
+import com.crypto212.auth.service.dto.payload.SignupDTO;
 import com.crypto212.clients.auth.JwtTokenClaims;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -79,10 +79,8 @@ public class AuthService {
                 user.isLocked(), user.isAccountExpired(),  user.isCredentialsExpired(), user.getRoles());
     }
 
-    public JwtTokenClaims getTokenClaims(String authHeader) {
-        String token = authHeader.substring(7);
+    public JwtTokenClaims getTokenClaims(String token) {
         if (!jwtTokenProvider.validateJwtToken(token)){
-            log.info(authHeader);
             throw new ApiException(HttpStatus.BAD_REQUEST, "Invalid Jwt Token");
         }
 

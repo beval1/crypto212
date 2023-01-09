@@ -6,16 +6,17 @@ CREATE TABLE USERS (
     account_enabled BOOLEAN NOT NULL,
     account_locked BOOLEAN NOT NULL,
     account_expired BOOLEAN NOT NULL,
-    credentials_expired BOOLEAN NOT NULL
+    credentials_expired BOOLEAN NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE ROLES (
     id BIGINT PRIMARY KEY NOT NULL,
-    role_name VARCHAR(20) UNIQUE
+    role_name VARCHAR(20) UNIQUE,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NOT NULL
 );
-INSERT INTO ROLES(id, role_name) VALUES
-(1060551628555292672, 'USER'),
-(1060556318613442560, 'ADMIN');
 
 CREATE TABLE USERS_ROLES (
     user_id BIGINT NOT NULL REFERENCES USERS(id),

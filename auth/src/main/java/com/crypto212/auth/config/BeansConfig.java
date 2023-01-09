@@ -22,7 +22,7 @@ public class BeansConfig {
         return new ModelMapper();
     }
 
-    @Bean(name = "mysql")
+    @Bean
     public TransactionTemplate transactionTemplate(DataSource dataSource) {
         return new TransactionTemplate(new DataSourceTransactionManager(dataSource));
     }

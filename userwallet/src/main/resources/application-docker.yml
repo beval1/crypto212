@@ -1,0 +1,24 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: userwallet
+  datasource:
+    password: password
+    url: jdbc:postgresql://postgres:5432/userwallet
+    username: amigoscode
+  zipkin:
+    base-url: http://zipkin:9411
+#  flyway:
+#      url: jdbc:postgresql://postgres:5432
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+snowflake:
+  workerId: 3
+
+

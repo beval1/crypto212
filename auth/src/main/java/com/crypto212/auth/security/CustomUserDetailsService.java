@@ -1,9 +1,9 @@
 package com.crypto212.auth.security;
 
-import com.crypto212.auth.exception.ApiException;
+import com.crypto212.auth.model.entity.RoleEntity;
+import com.crypto212.auth.model.entity.UserEntity;
 import com.crypto212.auth.repository.UserRepository;
-import com.crypto212.auth.repository.entity.RoleEntity;
-import com.crypto212.auth.repository.entity.UserEntity;
+import com.crypto212.shared.exception.ApiException;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;

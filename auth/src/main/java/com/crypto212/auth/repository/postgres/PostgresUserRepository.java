@@ -1,9 +1,9 @@
 package com.crypto212.auth.repository.postgres;
 
+import com.crypto212.auth.model.entity.RoleEntity;
+import com.crypto212.auth.model.entity.UserEntity;
 import com.crypto212.auth.repository.RoleRepository;
 import com.crypto212.auth.repository.UserRepository;
-import com.crypto212.auth.repository.entity.RoleEntity;
-import com.crypto212.auth.repository.entity.UserEntity;
 import com.crypto212.idgenerator.SnowFlake;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -12,6 +12,8 @@ import org.springframework.transaction.support.TransactionTemplate;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -50,6 +52,7 @@ public class PostgresUserRepository implements UserRepository {
                                  boolean accountExpired, boolean credentialsExpired, Set<RoleEntity> roles) {
         return txTemplate.execute(status -> {
             long snowFlakeId = snowFlake.nextId();
+            Timestamp currentTime = Timestamp.valueOf(LocalDateTime.now());
             jdbc.update(conn -> {
                 PreparedStatement ps = conn.prepareStatement(
                         Queries.INSERT_USER);
@@ -61,6 +64,8 @@ public class PostgresUserRepository implements UserRepository {
                 ps.setBoolean(6, locked);
                 ps.setBoolean(7, accountExpired);
                 ps.setBoolean(8, credentialsExpired);
+                ps.setTimestamp(9, currentTime);
+                ps.setTimestamp(10, currentTime);
                 return ps;
             });
 
@@ -83,6 +88,8 @@ public class PostgresUserRepository implements UserRepository {
                     .locked(locked)
                     .accountExpired(accountExpired)
                     .credentialsExpired(credentialsExpired)
+                    .createdAt(currentTime.toLocalDateTime())
+                    .updatedAt(currentTime.toLocalDateTime())
                     .build();
         });
     }
@@ -97,6 +104,8 @@ public class PostgresUserRepository implements UserRepository {
                 .locked(rs.getBoolean("account_locked"))
                 .accountExpired(rs.getBoolean("account_expired"))
                 .credentialsExpired(rs.getBoolean("credentials_expired"))
+                .createdAt(rs.getTimestamp("created_at").toLocalDateTime())
+                .updatedAt(rs.getTimestamp("updated_at").toLocalDateTime())
                 .build();
     }
 
@@ -110,13 +119,13 @@ public class PostgresUserRepository implements UserRepository {
     static class Queries {
         private Queries() {}
         public static final String GET_USER_BY_USERNAME = "SELECT id, username, pass, email, account_enabled, " +
-                "account_locked, account_expired, credentials_expired FROM users WHERE username = ?";
+                "account_locked, account_expired, credentials_expired, created_at, updated_at FROM users WHERE username = ?";
         public static final String GET_USER_BY_EMAIL = "SELECT id, username, pass, email, account_enabled, " +
-                "account_locked, account_expired, credentials_expired FROM users WHERE email = ?";
+                "account_locked, account_expired, credentials_expired, created_at, updated_at FROM users WHERE email = ?";
         public static final String INSERT_USER = "INSERT INTO users(id, username, email, pass, account_enabled, " +
-                "account_locked, account_expired, credentials_expired) VALUES (?,?,?,?,?,?,?,?)";
+                "account_locked, account_expired, credentials_expired, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?)";
         public static final String INSERT_USER_ROLE = "INSERT INTO users_roles(user_id, role_id) VALUES (?,?)";
-        public static final String GET_USER_ROLES = "SELECT r.role_name, r.id FROM ROLES as r " +
+        public static final String GET_USER_ROLES = "SELECT r.role_name, r.id, r.created_at, r.updated_at FROM ROLES as r " +
                 "JOIN USERS_ROLES as ur on r.id=ur.role_id WHERE ur.user_id=?";
     }
 

@@ -1,0 +1,7 @@
+app:
+  web3:
+    network: "mainnet"
+    infura-api-key: ${INFURA_API_KEY}
+    wallet-address: "0x98c415A7dDF5D0ca01b391e1d2079ECeFC997539"
+server:
+  port: 8087

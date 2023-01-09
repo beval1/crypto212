@@ -1,0 +1,1495 @@
+2023-01-09 14:18:44.700[1673266724700] | INFO  | background-preinit | o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+2023-01-09 14:18:44.710[1673266724710] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 51180 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:18:44.710[1673266724710] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:18:44.753[1673266724753] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:18:44.753[1673266724753] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:18:46.101[1673266726101] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=bc58ddd1-00c9-32d9-98eb-955ceca81333
+2023-01-09 14:18:46.779[1673266726779] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:18:46.787[1673266726787] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:18:46.787[1673266726787] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:18:46.788[1673266726788] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:18:46.876[1673266726876] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:18:46.877[1673266726877] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2124 ms
+2023-01-09 14:18:47.316[1673266727316] | WARN  | restartedMain | o.s.c.s.a.z.ZipkinAutoConfiguration  - Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2023-01-09 14:18:48.434[1673266728434] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:18:48.558[1673266728558] | INFO  | restartedMain | o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-01-09 14:18:48.887[1673266728887] | WARN  | restartedMain | o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-01-09 14:18:48.974[1673266728974] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:18:49.055[1673266729055] | INFO  | restartedMain | o.s.c.n.eureka.InstanceInfoFactory   - Setting initial instance status as: STARTING
+2023-01-09 14:18:49.088[1673266729088] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+2023-01-09 14:18:49.091[1673266729091] | INFO  | restartedMain | c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Application is null : false
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+2023-01-09 14:18:49.110[1673266729110] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+2023-01-09 14:18:49.387[1673266729387] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - The response status is 200
+2023-01-09 14:18:49.389[1673266729389] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+2023-01-09 14:18:49.392[1673266729392] | INFO  | restartedMain | c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-01-09 14:18:49.402[1673266729402] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1673266729401 with initial instances count: 0
+2023-01-09 14:18:49.409[1673266729409] | INFO  | restartedMain | o.s.c.n.e.s.EurekaServiceRegistry    - Registering application MARKETENGINE with eureka with status UP
+2023-01-09 14:18:49.410[1673266729410] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1673266729410, current=UP, previous=STARTING]
+2023-01-09 14:18:49.411[1673266729411] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085: registering service...
+2023-01-09 14:18:49.413[1673266729413] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:18:49.431[1673266729431] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:18:49.431[1673266729431] | INFO  | restartedMain | o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8085
+2023-01-09 14:18:49.450[1673266729450] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085 - registration status: 204
+2023-01-09 14:18:49.538[1673266729538] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 5.314 seconds (JVM running for 6.519)
+2023-01-09 14:18:49.810[1673266729810] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:18:49.810[1673266729810] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:18:49.811[1673266729811] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Application is null : false
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Application version is -1: false
+2023-01-09 14:19:19.393[1673266759393] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+2023-01-09 14:19:19.420[1673266759420] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - The response status is 200
+2023-01-09 14:21:43.063[1673266903063] | WARN  | AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}} | z.r.AsyncReporter$BoundedAsyncReporter - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-01-09 14:21:43.064[1673266903064] | WARN  | AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}} | z.r.AsyncReporter$BoundedAsyncReporter - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 9 common frames omitted
+2023-01-09 14:21:57.834[1673266917834] | INFO  | http-nio-8085-exec-2 | c.b.c.client.utils.RequestHandler    - GET /api/v3/api/v3/ping
+2023-01-09 14:21:57.844[1673266917844] | ERROR | http-nio-8085-exec-2 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceConnectorException: Invalid URL: Expected URL scheme 'http' or 'https' but no colon was found] with root cause
+com.binance.connector.client.exceptions.BinanceConnectorException: Invalid URL: Expected URL scheme 'http' or 'https' but no colon was found
+	at com.binance.connector.client.utils.RequestBuilder.buildPublicRequest(RequestBuilder.java:46)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:43)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.ping(Market.java:40)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:15)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:89)
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:23:14.727[1673266994727] | INFO  | SpringApplicationShutdownHook | o.s.c.n.e.s.EurekaServiceRegistry    - Unregistering application MARKETENGINE with eureka with status DOWN
+2023-01-09 14:23:14.727[1673266994727] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1673266994727, current=DOWN, previous=UP]
+2023-01-09 14:23:14.727[1673266994727] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085: registering service...
+2023-01-09 14:23:14.733[1673266994733] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085 - registration status: 204
+2023-01-09 14:23:14.894[1673266994894] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+2023-01-09 14:23:17.905[1673266997905] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Unregistering ...
+2023-01-09 14:23:17.911[1673266997911] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085 - deregister  status: 200
+2023-01-09 14:23:17.914[1673266997914] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+2023-01-09 14:23:23.458[1673267003458] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 44320 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:23:23.457[1673267003457] | INFO  | background-preinit | o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+2023-01-09 14:23:23.460[1673267003460] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:23:23.497[1673267003497] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:23:23.497[1673267003497] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:23:24.600[1673267004600] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=bc58ddd1-00c9-32d9-98eb-955ceca81333
+2023-01-09 14:23:25.230[1673267005230] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:23:25.238[1673267005238] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:23:25.238[1673267005238] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:23:25.238[1673267005238] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:23:25.323[1673267005323] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:23:25.323[1673267005323] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1825 ms
+2023-01-09 14:23:25.751[1673267005751] | WARN  | restartedMain | o.s.c.s.a.z.ZipkinAutoConfiguration  - Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2023-01-09 14:23:26.867[1673267006867] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:23:26.984[1673267006984] | INFO  | restartedMain | o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-01-09 14:23:27.243[1673267007243] | WARN  | restartedMain | o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-01-09 14:23:27.321[1673267007321] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:23:27.394[1673267007394] | INFO  | restartedMain | o.s.c.n.eureka.InstanceInfoFactory   - Setting initial instance status as: STARTING
+2023-01-09 14:23:27.423[1673267007423] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+2023-01-09 14:23:27.426[1673267007426] | INFO  | restartedMain | c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Application is null : false
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+2023-01-09 14:23:27.441[1673267007441] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+2023-01-09 14:23:27.669[1673267007669] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - The response status is 200
+2023-01-09 14:23:27.671[1673267007671] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+2023-01-09 14:23:27.674[1673267007674] | INFO  | restartedMain | c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-01-09 14:23:27.678[1673267007678] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1673267007677 with initial instances count: 0
+2023-01-09 14:23:27.685[1673267007685] | INFO  | restartedMain | o.s.c.n.e.s.EurekaServiceRegistry    - Registering application MARKETENGINE with eureka with status UP
+2023-01-09 14:23:27.686[1673267007686] | INFO  | restartedMain | c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1673267007686, current=UP, previous=STARTING]
+2023-01-09 14:23:27.687[1673267007687] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085: registering service...
+2023-01-09 14:23:27.688[1673267007688] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:23:27.703[1673267007703] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:23:27.704[1673267007704] | INFO  | restartedMain | o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8085
+2023-01-09 14:23:27.719[1673267007719] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085 - registration status: 204
+2023-01-09 14:23:27.811[1673267007811] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 4.812 seconds (JVM running for 5.677)
+2023-01-09 14:23:27.881[1673267007881] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:23:27.881[1673267007881] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:23:27.882[1673267007882] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Application is null : false
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Application version is -1: false
+2023-01-09 14:23:57.687[1673267037687] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+2023-01-09 14:23:57.702[1673267037702] | INFO  | DiscoveryClient-CacheRefreshExecutor-0 | c.netflix.discovery.DiscoveryClient  - The response status is 200
+2023-01-09 14:24:18.136[1673267058136] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://api.binance.com/api/v3/api/v3/ping
+2023-01-09 14:24:18.830[1673267058830] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: <html><body><h2>404 Not found</h2></body></html>] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: <html><body><h2>404 Not found</h2></body></html>
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:63)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.ping(Market.java:40)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:15)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:89)
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:24:19.871[1673267059871] | WARN  | AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}} | z.r.AsyncReporter$BoundedAsyncReporter - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-01-09 14:24:19.872[1673267059872] | WARN  | AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}} | z.r.AsyncReporter$BoundedAsyncReporter - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 9 common frames omitted
+2023-01-09 14:24:38.141[1673267078141] | INFO  | SpringApplicationShutdownHook | o.s.c.n.e.s.EurekaServiceRegistry    - Unregistering application MARKETENGINE with eureka with status DOWN
+2023-01-09 14:24:38.141[1673267078141] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1673267078141, current=DOWN, previous=UP]
+2023-01-09 14:24:38.142[1673267078142] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085: registering service...
+2023-01-09 14:24:38.148[1673267078148] | INFO  | DiscoveryClient-InstanceInfoReplicator-0 | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085 - registration status: 204
+2023-01-09 14:24:39.061[1673267079061] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+2023-01-09 14:24:42.063[1673267082063] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Unregistering ...
+2023-01-09 14:24:42.069[1673267082069] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - DiscoveryClient_MARKETENGINE/DESKTOP-LKLK97T:marketengine:8085 - deregister  status: 200
+2023-01-09 14:24:42.072[1673267082072] | INFO  | SpringApplicationShutdownHook | c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+2023-01-09 14:24:48.612[1673267088612] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 41864 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:24:48.614[1673267088614] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:24:48.675[1673267088675] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:24:48.675[1673267088675] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:24:49.516[1673267089516] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=a67233de-c0b4-3d72-981a-e71bdb81ae08
+2023-01-09 14:24:49.872[1673267089872] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:24:49.878[1673267089878] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:24:49.878[1673267089878] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:24:49.879[1673267089879] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:24:49.951[1673267089951] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:24:49.951[1673267089951] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1275 ms
+2023-01-09 14:24:50.441[1673267090441] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:24:50.604[1673267090604] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:24:50.652[1673267090652] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:24:50.667[1673267090667] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:24:50.769[1673267090769] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.659 seconds (JVM running for 3.435)
+2023-01-09 14:24:51.198[1673267091198] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:24:51.198[1673267091198] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:24:51.199[1673267091199] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 0 ms
+2023-01-09 14:25:01.866[1673267101866] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://api.binance.com/api/v3/api/v3/ping
+2023-01-09 14:25:02.386[1673267102386] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: <html><body><h2>404 Not found</h2></body></html>] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: <html><body><h2>404 Not found</h2></body></html>
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:63)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.ping(Market.java:40)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:15)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:28:23.715[1673267303715] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 50588 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:28:23.716[1673267303716] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:28:23.755[1673267303755] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:28:23.756[1673267303756] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:28:24.587[1673267304587] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=a67233de-c0b4-3d72-981a-e71bdb81ae08
+2023-01-09 14:28:24.984[1673267304984] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:28:24.993[1673267304993] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:28:24.993[1673267304993] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:28:24.993[1673267304993] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:28:25.073[1673267305073] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:28:25.073[1673267305073] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1317 ms
+2023-01-09 14:28:25.551[1673267305551] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:28:25.696[1673267305696] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:28:25.747[1673267305747] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:28:25.762[1673267305762] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:28:25.865[1673267305865] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.724 seconds (JVM running for 3.611)
+2023-01-09 14:28:26.028[1673267306028] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:28:26.029[1673267306029] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:28:26.030[1673267306030] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:31:18.466[1673267478466] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://api.binance.com/api/v3/ping
+2023-01-09 14:37:32.379[1673267852379] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 56932 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:37:32.381[1673267852381] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:37:32.421[1673267852421] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:37:32.421[1673267852421] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:37:33.245[1673267853245] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=a67233de-c0b4-3d72-981a-e71bdb81ae08
+2023-01-09 14:37:33.634[1673267853634] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:37:33.661[1673267853661] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:37:33.662[1673267853662] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:37:33.662[1673267853662] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:37:33.741[1673267853741] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:37:33.741[1673267853741] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1319 ms
+2023-01-09 14:37:34.213[1673267854213] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:37:34.358[1673267854358] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:37:34.404[1673267854404] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:37:34.419[1673267854419] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:37:34.527[1673267854527] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.662 seconds (JVM running for 3.426)
+2023-01-09 14:37:34.846[1673267854846] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:37:34.846[1673267854846] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:37:34.847[1673267854847] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:37:39.137[1673267859137] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/api/v3/ping
+2023-01-09 14:37:39.830[1673267859830] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: <html><body><h2>404 Not found</h2></body></html>] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: <html><body><h2>404 Not found</h2></body></html>
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:63)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.ping(Market.java:40)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:15)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:38:35.788[1673267915788] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 47372 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:38:35.790[1673267915790] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:38:35.828[1673267915828] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:38:35.828[1673267915828] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:38:36.595[1673267916595] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=a67233de-c0b4-3d72-981a-e71bdb81ae08
+2023-01-09 14:38:36.921[1673267916921] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:38:36.929[1673267916929] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:38:36.930[1673267916930] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:38:36.930[1673267916930] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:38:37.013[1673267917013] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:38:37.014[1673267917014] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1185 ms
+2023-01-09 14:38:37.465[1673267917465] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:38:37.598[1673267917598] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:38:37.646[1673267917646] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:38:37.659[1673267917659] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:38:37.758[1673267917758] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.482 seconds (JVM running for 3.169)
+2023-01-09 14:38:37.900[1673267917900] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:38:37.900[1673267917900] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:38:37.901[1673267917901] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:38:41.491[1673267921491] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/ping
+2023-01-09 14:47:56.820[1673268476820] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 46476 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:47:56.823[1673268476823] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:47:56.870[1673268476870] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:47:56.871[1673268476871] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:47:57.688[1673268477688] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 14:47:58.112[1673268478112] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:47:58.120[1673268478120] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:47:58.121[1673268478121] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:47:58.121[1673268478121] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:47:58.205[1673268478205] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:47:58.205[1673268478205] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1334 ms
+2023-01-09 14:47:58.733[1673268478733] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:47:58.872[1673268478872] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:47:58.922[1673268478922] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:47:58.937[1673268478937] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:47:59.040[1673268479040] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.729 seconds (JVM running for 3.607)
+2023-01-09 14:47:59.494[1673268479494] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:47:59.494[1673268479494] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:47:59.495[1673268479495] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:48:04.392[1673268484392] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=btc-usdt&interval=300
+2023-01-09 14:48:05.493[1673268485493] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'symbol'; legal range is '^[A-Z0-9-_.]{1,20}$'."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'symbol'; legal range is '^[A-Z0-9-_.]{1,20}$'."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:48:46.948[1673268526948] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 52428 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:48:46.950[1673268526950] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:48:46.988[1673268526988] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:48:46.988[1673268526988] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:48:47.802[1673268527802] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 14:48:48.140[1673268528140] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:48:48.147[1673268528147] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:48:48.147[1673268528147] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:48:48.147[1673268528147] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:48:48.217[1673268528217] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:48:48.217[1673268528217] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1229 ms
+2023-01-09 14:48:48.723[1673268528723] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:48:48.860[1673268528860] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:48:48.908[1673268528908] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:48:48.921[1673268528921] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:48:49.022[1673268529022] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.618 seconds (JVM running for 3.35)
+2023-01-09 14:48:49.126[1673268529126] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:48:49.126[1673268529126] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:48:49.128[1673268529128] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 2 ms
+2023-01-09 14:48:56.846[1673268536846] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=300
+2023-01-09 14:48:57.840[1673268537840] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:49:16.584[1673268556584] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 17868 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:49:16.586[1673268556586] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:49:16.628[1673268556628] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:49:16.628[1673268556628] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:49:17.470[1673268557470] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 14:49:17.802[1673268557802] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:49:17.808[1673268557808] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:49:17.809[1673268557809] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:49:17.809[1673268557809] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:49:17.879[1673268557879] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:49:17.879[1673268557879] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1250 ms
+2023-01-09 14:49:18.332[1673268558332] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:49:18.462[1673268558462] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:49:18.509[1673268558509] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:49:18.522[1673268558522] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:49:18.625[1673268558625] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.59 seconds (JVM running for 3.359)
+2023-01-09 14:49:18.846[1673268558846] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:49:18.846[1673268558846] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:49:18.847[1673268558847] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 0 ms
+2023-01-09 14:49:21.787[1673268561787] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceConnectorException: "interval" must be of class java.lang.String type.] with root cause
+com.binance.connector.client.exceptions.BinanceConnectorException: "interval" must be of class java.lang.String type.
+	at com.binance.connector.client.utils.ParameterChecker.checkParameterType(ParameterChecker.java:24)
+	at com.binance.connector.client.utils.ParameterChecker.checkParameter(ParameterChecker.java:13)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:206)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:49:46.282[1673268586282] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 52616 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:49:46.284[1673268586284] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:49:46.325[1673268586325] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:49:46.326[1673268586326] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:49:47.124[1673268587124] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 14:49:47.458[1673268587458] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:49:47.464[1673268587464] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:49:47.464[1673268587464] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:49:47.464[1673268587464] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:49:47.520[1673268587520] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:49:47.520[1673268587520] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1194 ms
+2023-01-09 14:49:47.987[1673268587987] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:49:48.117[1673268588117] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:49:48.165[1673268588165] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:49:48.178[1673268588178] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:49:48.280[1673268588280] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.547 seconds (JVM running for 3.239)
+2023-01-09 14:49:48.505[1673268588505] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:49:48.505[1673268588505] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:49:48.506[1673268588506] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:49:51.191[1673268591191] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=btcusdt&interval=60
+2023-01-09 14:49:52.491[1673268592491] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'symbol'; legal range is '^[A-Z0-9-_.]{1,20}$'."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'symbol'; legal range is '^[A-Z0-9-_.]{1,20}$'."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:50:05.506[1673268605506] | INFO  | http-nio-8085-exec-2 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=60
+2023-01-09 14:50:06.265[1673268606265] | ERROR | http-nio-8085-exec-2 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:51:01.317[1673268661317] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 55280 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:51:01.319[1673268661319] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:51:01.367[1673268661367] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:51:01.367[1673268661367] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:51:02.301[1673268662301] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 14:51:02.728[1673268662728] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:51:02.737[1673268662737] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:51:02.738[1673268662738] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:51:02.738[1673268662738] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:51:02.821[1673268662821] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:51:02.821[1673268662821] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1453 ms
+2023-01-09 14:51:03.322[1673268663322] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:51:03.473[1673268663473] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:51:03.522[1673268663522] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:51:03.537[1673268663537] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:51:03.641[1673268663641] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.825 seconds (JVM running for 3.689)
+2023-01-09 14:51:04.020[1673268664020] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:51:04.020[1673268664020] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:51:04.021[1673268664021] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:51:13.586[1673268673586] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1000
+2023-01-09 14:51:14.715[1673268674715] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 14:51:24.867[1673268684867] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 46192 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 14:51:24.870[1673268684870] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 14:51:24.917[1673268684917] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 14:51:24.917[1673268684917] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 14:51:25.691[1673268685691] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 14:51:26.055[1673268686055] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 14:51:26.061[1673268686061] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:51:26.062[1673268686062] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 14:51:26.062[1673268686062] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 14:51:26.133[1673268686133] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 14:51:26.133[1673268686133] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1215 ms
+2023-01-09 14:51:26.608[1673268686608] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 14:51:26.753[1673268686753] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:51:26.801[1673268686801] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 14:51:26.815[1673268686815] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 14:51:26.919[1673268686919] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.571 seconds (JVM running for 3.306)
+2023-01-09 14:51:27.126[1673268687126] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 14:51:27.126[1673268687126] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 14:51:27.127[1673268687127] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 14:51:59.866[1673268719866] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=60
+2023-01-09 14:52:00.876[1673268720876] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1120,"msg":"Invalid interval."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:20)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 15:04:33.284[1673269473284] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 44672 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:04:33.286[1673269473286] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:04:33.332[1673269473332] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:04:33.333[1673269473333] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:04:34.281[1673269474281] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:04:34.711[1673269474711] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:04:34.720[1673269474720] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:04:34.720[1673269474720] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:04:34.721[1673269474721] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:04:34.794[1673269474794] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:04:34.794[1673269474794] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1461 ms
+2023-01-09 15:04:35.373[1673269475373] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:04:35.523[1673269475523] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:04:35.574[1673269475574] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:04:35.591[1673269475591] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:04:35.698[1673269475698] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.961 seconds (JVM running for 3.869)
+2023-01-09 15:04:35.823[1673269475823] | INFO  | RMI TCP Connection(5)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:04:35.823[1673269475823] | INFO  | RMI TCP Connection(5)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:04:35.824[1673269475824] | INFO  | RMI TCP Connection(5)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:04:40.396[1673269480396] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&start_time=2023-01-08&end_time=2023-01-09
+2023-01-09 15:04:41.522[1673269481522] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1104,"msg":"Not all sent parameters were read; read '2' parameter(s) but was sent '4'."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1104,"msg":"Not all sent parameters were read; read '2' parameter(s) but was sent '4'."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:22)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 15:05:40.180[1673269540180] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 55984 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:05:40.182[1673269540182] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:05:40.219[1673269540219] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:05:40.219[1673269540219] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:05:41.036[1673269541036] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:05:41.437[1673269541437] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:05:41.445[1673269541445] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:05:41.445[1673269541445] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:05:41.445[1673269541445] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:05:41.578[1673269541578] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:05:41.578[1673269541578] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1358 ms
+2023-01-09 15:05:42.102[1673269542102] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:05:42.241[1673269542241] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:05:42.292[1673269542292] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:05:42.306[1673269542306] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:05:42.412[1673269542412] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.724 seconds (JVM running for 3.677)
+2023-01-09 15:05:42.797[1673269542797] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:05:42.798[1673269542798] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:05:42.799[1673269542799] | INFO  | RMI TCP Connection(1)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:05:45.229[1673269545229] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=2023-01-08&endTime=2023-01-09
+2023-01-09 15:05:46.390[1673269546390] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'startTime'; legal range is '^[0-9]{1,20}$'."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'startTime'; legal range is '^[0-9]{1,20}$'."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:22)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 15:15:51.720[1673270151720] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 50632 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:15:51.722[1673270151722] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:15:51.762[1673270151762] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:15:51.762[1673270151762] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:15:52.548[1673270152548] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:15:52.957[1673270152957] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:15:52.966[1673270152966] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:15:52.966[1673270152966] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:15:52.966[1673270152966] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:15:53.041[1673270153041] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:15:53.041[1673270153041] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1278 ms
+2023-01-09 15:15:53.529[1673270153529] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:15:53.667[1673270153667] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:15:53.715[1673270153715] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:15:53.729[1673270153729] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:15:53.832[1673270153832] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.636 seconds (JVM running for 3.624)
+2023-01-09 15:15:54.339[1673270154339] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:15:54.339[1673270154339] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:15:54.340[1673270154340] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:15:57.425[1673270157425] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=2023-08-01&endTime=2023-09-01
+2023-01-09 15:15:58.579[1673270158579] | ERROR | http-nio-8085-exec-1 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'startTime'; legal range is '^[0-9]{1,20}$'."}] with root cause
+com.binance.connector.client.exceptions.BinanceClientException: {"code":-1100,"msg":"Illegal characters found in parameter 'startTime'; legal range is '^[0-9]{1,20}$'."}
+	at com.binance.connector.client.utils.ResponseHandler.handleErrorResponse(ResponseHandler.java:61)
+	at com.binance.connector.client.utils.ResponseHandler.handleResponse(ResponseHandler.java:32)
+	at com.binance.connector.client.utils.RequestHandler.sendApiRequest(RequestHandler.java:52)
+	at com.binance.connector.client.utils.RequestHandler.sendPublicRequest(RequestHandler.java:57)
+	at com.binance.connector.client.impl.spot.Market.klines(Market.java:207)
+	at com.crypto212.marketengine.service.MarketDataService.getMarketCandlesForSymbol(MarketDataService.java:22)
+	at com.crypto212.marketengine.web.MarketDataController.getMarketCandles(MarketDataController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 15:17:32.889[1673270252889] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 57048 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:17:32.891[1673270252891] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:17:32.930[1673270252930] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:17:32.930[1673270252930] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:17:33.754[1673270253754] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:17:34.144[1673270254144] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:17:34.152[1673270254152] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:17:34.152[1673270254152] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:17:34.152[1673270254152] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:17:34.217[1673270254217] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:17:34.217[1673270254217] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1287 ms
+2023-01-09 15:17:34.739[1673270254739] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:17:34.875[1673270254875] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:17:34.926[1673270254926] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:17:34.940[1673270254940] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:17:35.043[1673270255043] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.626 seconds (JVM running for 3.463)
+2023-01-09 15:17:35.148[1673270255148] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:17:35.148[1673270255148] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:17:35.149[1673270255149] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:17:38.550[1673270258550] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1673128800000&endTime=1673215200000
+2023-01-09 15:29:16.469[1673270956469] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 52308 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:29:16.471[1673270956471] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:29:16.508[1673270956508] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:29:16.508[1673270956508] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:29:17.367[1673270957367] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:29:17.787[1673270957787] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:29:17.795[1673270957795] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:29:17.796[1673270957796] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:29:17.796[1673270957796] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:29:17.865[1673270957865] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:29:17.865[1673270957865] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1356 ms
+2023-01-09 15:29:18.354[1673270958354] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:29:18.493[1673270958493] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:29:18.542[1673270958542] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:29:18.556[1673270958556] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:29:18.659[1673270958659] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.638 seconds (JVM running for 3.391)
+2023-01-09 15:29:19.022[1673270959022] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:29:19.023[1673270959023] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:29:19.023[1673270959023] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 0 ms
+2023-01-09 15:29:22.190[1673270962190] | WARN  | http-nio-8085-exec-1 | o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'interval' for method parameter type String is not present]
+2023-01-09 15:30:48.461[1673271048461] | WARN  | http-nio-8085-exec-2 | o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'startTime' for method parameter type String is not present]
+2023-01-09 15:31:28.189[1673271088189] | WARN  | http-nio-8085-exec-3 | o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'startTime' for method parameter type String is not present]
+2023-01-09 15:31:51.212[1673271111212] | INFO  | http-nio-8085-exec-4 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1673128800000&endTime=1673215200000
+2023-01-09 15:31:52.468[1673271112468] | ERROR | http-nio-8085-exec-4 | o.a.c.c.C.[.[.[.[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.crypto212.marketengine.service.dto.CandleArrayDTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.crypto212.marketengine.service.dto.CandleArrayDTO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.crypto212.shared.dto.ResponseDTO["content"])] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.crypto212.marketengine.service.dto.CandleArrayDTO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.crypto212.shared.dto.ResponseDTO["content"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1276)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:71)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:33)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1514)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1006)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:454)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-09 15:32:36.736[1673271156736] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 50508 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:32:36.738[1673271156738] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:32:36.782[1673271156782] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:32:36.782[1673271156782] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:32:37.616[1673271157616] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:32:38.042[1673271158042] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:32:38.050[1673271158050] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:32:38.050[1673271158050] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:32:38.050[1673271158050] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:32:38.134[1673271158134] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:32:38.134[1673271158134] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1351 ms
+2023-01-09 15:32:38.616[1673271158616] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:32:38.759[1673271158759] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:32:38.808[1673271158808] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:32:38.823[1673271158823] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:32:38.952[1673271158952] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.704 seconds (JVM running for 3.506)
+2023-01-09 15:32:39.431[1673271159431] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:32:39.431[1673271159431] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:32:39.432[1673271159432] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:32:42.980[1673271162980] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1673128800000&endTime=1673215200000
+2023-01-09 15:45:56.568[1673271956568] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 54828 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:45:56.571[1673271956571] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:45:56.627[1673271956627] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:45:56.627[1673271956627] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:45:57.830[1673271957830] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:45:58.285[1673271958285] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:45:58.293[1673271958293] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:45:58.294[1673271958294] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:45:58.294[1673271958294] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:45:58.366[1673271958366] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:45:58.366[1673271958366] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1737 ms
+2023-01-09 15:45:58.996[1673271958996] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:45:59.152[1673271959152] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:45:59.213[1673271959213] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:45:59.230[1673271959230] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:45:59.334[1673271959334] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 3.316 seconds (JVM running for 4.492)
+2023-01-09 15:45:59.393[1673271959393] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:45:59.393[1673271959393] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:45:59.394[1673271959394] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:46:05.095[1673271965095] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1673128800000&endTime=1673215200000
+2023-01-09 15:46:54.373[1673272014373] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 54544 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:46:54.375[1673272014375] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:46:54.412[1673272014412] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:46:54.412[1673272014412] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:46:55.259[1673272015259] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:46:55.634[1673272015634] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:46:55.643[1673272015643] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:46:55.644[1673272015644] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:46:55.644[1673272015644] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:46:55.722[1673272015722] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:46:55.722[1673272015722] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1310 ms
+2023-01-09 15:46:56.217[1673272016217] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:46:56.357[1673272016357] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:46:56.404[1673272016404] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:46:56.419[1673272016419] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:46:56.522[1673272016522] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.611 seconds (JVM running for 3.404)
+2023-01-09 15:46:56.652[1673272016652] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:46:56.652[1673272016652] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:46:56.652[1673272016652] | INFO  | RMI TCP Connection(2)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 0 ms
+2023-01-09 15:46:59.120[1673272019120] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1673128800000&endTime=1673215200000
+2023-01-09 15:48:28.574[1673272108574] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Starting MarketengineApplication using Java 18.0.1.1 on DESKTOP-LKLK97T with PID 57208 (C:\Users\BEVaL\Desktop\microservices-main\crypto212\marketengine\target\classes started by BEVaL in C:\Users\BEVaL\Desktop\microservices-main\crypto212)
+2023-01-09 15:48:28.576[1673272108576] | INFO  | restartedMain | c.c.m.MarketengineApplication        - No active profile set, falling back to default profiles: default
+2023-01-09 15:48:28.613[1673272108613] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 15:48:28.613[1673272108613] | INFO  | restartedMain | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 15:48:29.495[1673272109495] | INFO  | restartedMain | o.s.cloud.context.scope.GenericScope - BeanFactory id=0eca6e75-ed09-3624-9681-6d75220455fa
+2023-01-09 15:48:29.887[1673272109887] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8085 (http)
+2023-01-09 15:48:29.898[1673272109898] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:48:29.898[1673272109898] | INFO  | restartedMain | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2023-01-09 15:48:29.898[1673272109898] | INFO  | restartedMain | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-01-09 15:48:30.015[1673272110015] | INFO  | restartedMain | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2023-01-09 15:48:30.015[1673272110015] | INFO  | restartedMain | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1401 ms
+2023-01-09 15:48:30.511[1673272110511] | INFO  | restartedMain | o.s.b.d.a.OptionalLiveReloadServer   - LiveReload server is running on port 35729
+2023-01-09 15:48:30.648[1673272110648] | INFO  | restartedMain | o.s.b.a.e.web.EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-09 15:48:30.695[1673272110695] | INFO  | restartedMain | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8085"]
+2023-01-09 15:48:30.709[1673272110709] | INFO  | restartedMain | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8085 (http) with context path ''
+2023-01-09 15:48:30.813[1673272110813] | INFO  | restartedMain | c.c.m.MarketengineApplication        - Started MarketengineApplication in 2.722 seconds (JVM running for 3.548)
+2023-01-09 15:48:30.985[1673272110985] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 15:48:30.985[1673272110985] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Initializing Servlet 'dispatcherServlet'
+2023-01-09 15:48:30.986[1673272110986] | INFO  | RMI TCP Connection(3)-172.19.176.1 | o.s.web.servlet.DispatcherServlet    - Completed initialization in 1 ms
+2023-01-09 15:48:34.887[1673272114887] | INFO  | http-nio-8085-exec-1 | c.b.c.client.utils.RequestHandler    - GET https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1673128800000&endTime=1673215200000

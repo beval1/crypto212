@@ -18,6 +18,9 @@
         <module>apigw</module>
         <module>amqp</module>
         <module>auth</module>
+        <module>userwallet</module>
+        <module>privatewallet</module>
+        <module>marketengine</module>
     </modules>
 
     <name>crypto212</name>

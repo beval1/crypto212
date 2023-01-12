@@ -1,7 +1,7 @@
 package com.crypto212.auth.repository;
 
-import com.crypto212.auth.repository.entity.RoleEntity;
-import com.crypto212.auth.repository.entity.RoleEnum;
+import com.crypto212.auth.model.entity.RoleEntity;
+import com.crypto212.auth.model.entity.RoleEnum;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

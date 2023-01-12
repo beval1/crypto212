@@ -1,0 +1,29 @@
+app:
+  binance:
+    baseUrl: "https://testnet.binance.vision"
+    apiKey: ${BINANCE_API_KEY}
+    secretKey: ${BINANCE_SECRET_KEY}
+server:
+  port: 8085
+spring:
+  application:
+    name: marketengine
+#  datasource:
+#    password: password
+#    url: jdbc:postgresql://localhost:5432/marketengine
+#    username: amigoscode
+#    driver-class-name: org.postgresql.Driver
+  zipkin:
+    base-url: http://localhost:9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+snowflake:
+  workerId: 2
+
+
+

@@ -124,8 +124,56 @@ services:
     depends_on:
       - zipkin
       - postgres
+      - eureka-server
+  marketengine:
+    image: bobo91280/marketengine:latest
+    container_name: marketengine
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - BINANCE_API_KEY=DjS6T7yG0j8Ohk0JwLAlC2QYAu5ReJV0NfIYJJT7wlERHMcFJzo5cwRIrM5s791Z
+      - BINANCE_SECRET_KEY=KweQuxpkNvgYY65iChZJDnAnTm4lwEw8EjsVeojPXV4GAHey0daHmDT3DqUopGbY
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
       - rabbitmq
       - eureka-server
+  privatewallet:
+    image: bobo91280/privatewallet:latest
+    container_name: privatewallet
+    ports:
+      - "8087:8087"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - INFURA_API_KEY=KweQuxpkNvgYY65iChZJDnAnTm4lwEw8EjsVeojPXV4GAHey0daHmDT3DqUopGbY
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+      - eureka-server
+  userwallet:
+    image: bobo91280/userwallet:latest
+    container_name: userwallet
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+      - eureka-server
+
 networks:
   postgres:
     driver: bridge

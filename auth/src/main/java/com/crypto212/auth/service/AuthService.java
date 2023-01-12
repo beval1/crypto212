@@ -1,17 +1,17 @@
 package com.crypto212.auth.service;
 
-import com.crypto212.auth.exception.ApiException;
 import com.crypto212.auth.exception.RoleNotFoundException;
 import com.crypto212.auth.exception.UserAlreadyExistsException;
+import com.crypto212.auth.model.dto.payload.SigninDTO;
+import com.crypto212.auth.model.dto.payload.SignupDTO;
+import com.crypto212.auth.model.entity.RoleEntity;
+import com.crypto212.auth.model.entity.RoleEnum;
+import com.crypto212.auth.model.entity.UserEntity;
 import com.crypto212.auth.repository.RoleRepository;
 import com.crypto212.auth.repository.UserRepository;
-import com.crypto212.auth.repository.entity.RoleEntity;
-import com.crypto212.auth.repository.entity.RoleEnum;
-import com.crypto212.auth.repository.entity.UserEntity;
 import com.crypto212.auth.security.JwtTokenProvider;
-import com.crypto212.auth.service.dto.payload.SigninDTO;
-import com.crypto212.auth.service.dto.payload.SignupDTO;
 import com.crypto212.clients.auth.JwtTokenClaims;
+import com.crypto212.shared.exception.ApiException;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;

@@ -1,9 +1,9 @@
 package com.crypto212.auth.web;
 
+import com.crypto212.auth.model.dto.payload.SigninDTO;
+import com.crypto212.auth.model.dto.payload.SignupDTO;
+import com.crypto212.auth.model.dto.response.JwtResponseDTO;
 import com.crypto212.auth.service.AuthService;
-import com.crypto212.auth.service.dto.payload.SigninDTO;
-import com.crypto212.auth.service.dto.payload.SignupDTO;
-import com.crypto212.auth.service.dto.response.JwtResponseDTO;
 import com.crypto212.clients.auth.JwtTokenClaims;
 import com.crypto212.shared.dto.ResponseDTO;
 import lombok.extern.slf4j.Slf4j;

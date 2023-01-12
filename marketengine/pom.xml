@@ -105,6 +105,12 @@
             <artifactId>binance-connector-java</artifactId>
             <version>1.12.0</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.binance.api</groupId>-->
+<!--            <artifactId>binance-api-client</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>

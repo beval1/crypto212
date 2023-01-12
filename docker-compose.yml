@@ -142,7 +142,38 @@ services:
       - postgres
       - rabbitmq
       - eureka-server
-      -
+  privatewallet:
+    image: bobo91280/privatewallet:latest
+    container_name: privatewallet
+    ports:
+      - "8087:8087"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - INFURA_API_KEY=KweQuxpkNvgYY65iChZJDnAnTm4lwEw8EjsVeojPXV4GAHey0daHmDT3DqUopGbY
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+      - eureka-server
+  userwallet:
+    image: bobo91280/userwallet:latest
+    container_name: userwallet
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+      - eureka-server
+
 networks:
   postgres:
     driver: bridge

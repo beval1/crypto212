@@ -1,4 +1,4 @@
-package com.example.privatewallet;
+package com.crypto212.privatewallet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

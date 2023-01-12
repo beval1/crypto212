@@ -7,6 +7,7 @@ import com.crypto212.wallet.repository.entity.WalletEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,10 +39,10 @@ public class PostgresWalletRepository implements WalletRepository {
     }
 
     @Override
-    public void updateUserAsset(Long walletId, Long assetId, String amount) {
+    public void updateUserAsset(Long walletId, Long assetId, BigDecimal amount) {
         jdbcTemplate.update(conn -> {
             PreparedStatement ps = conn.prepareStatement(Queries.UPDATE_USER_ASSET);
-            ps.setString(1, amount);
+            ps.setBigDecimal(1, amount);
             ps.setLong(2, walletId);
             ps.setLong(3, assetId);
             return ps;
@@ -53,6 +54,11 @@ public class PostgresWalletRepository implements WalletRepository {
         List<WalletAssetEntity> walletAssetEntities = jdbcTemplate
                 .query(Queries.GET_WALLET_ASSET, (rs, rowNum) -> walletAssetFromResultSet(rs), walletId, assetSymbol);
         return !walletAssetEntities.isEmpty() ? Optional.of(walletAssetEntities.get(0)) : Optional.empty();
+    }
+
+    @Override
+    public BigDecimal getTotalUserAssetBalance(String assetName) {
+        return jdbcTemplate.queryForObject(Queries.GET_TOTAL_USERS_ASSET, (rs, rowNum) -> rs.getBigDecimal(assetName), assetName);
     }
 
     private WalletAssetEntity walletAssetFromResultSet(ResultSet rs) throws SQLException {
@@ -83,6 +89,7 @@ public class PostgresWalletRepository implements WalletRepository {
     }
 
     private static class Queries {
+        private static final String GET_TOTAL_USERS_ASSET = "SELECT ? FROM user_assets";
         private static final String UPDATE_USER_ASSET = "UPDATE  wallets_assets SET amount = ? " +
                 "WHERE wallet_id = ? AND asset_id = ?";
         private static final String GET_USER_WALLET = "SELECT id, user_id, created_at, updated_at " +

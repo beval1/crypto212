@@ -19,6 +19,7 @@ public class SecurityConfig {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
                 .antMatchers("/api/v1/wallet/**").permitAll()
+                .antMatchers("/api/v1/assets/**").permitAll()
                 .anyRequest().authenticated();
 
         return http.build();

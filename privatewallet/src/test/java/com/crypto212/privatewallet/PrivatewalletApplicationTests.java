@@ -1,4 +1,4 @@
-package com.example.privatewallet;
+package com.crypto212.privatewallet;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

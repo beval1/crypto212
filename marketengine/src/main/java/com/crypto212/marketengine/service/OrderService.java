@@ -70,7 +70,7 @@ public class OrderService {
         //get user wallet total user assets
         ResponseEntity<TotalUserAssetDTO> userWalletResponse =  userWalletClient
                 .totalUserAssetBalance(baseCurrencyName);
-        BigDecimal totalUserBaseCurrencyBalance = userWalletResponse.getBody().getBalance();
+        BigDecimal totalUserBaseCurrencyBalance = new BigDecimal(userWalletResponse.getBody().getBalance());
 
         //check if there's enough liquidity
         BigDecimal freeBalance = totalBaseCurrencyBalance.subtract(totalUserBaseCurrencyBalance);

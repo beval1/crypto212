@@ -1,4 +1,4 @@
-package com.crypto212.wallet.repository.entity;
+package com.crypto212.userwallet.repository.entity;
 
 import lombok.*;
 

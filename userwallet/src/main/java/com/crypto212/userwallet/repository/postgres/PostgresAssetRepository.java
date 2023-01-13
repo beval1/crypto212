@@ -1,11 +1,12 @@
-package com.crypto212.wallet.repository.postgres;
+package com.crypto212.userwallet.repository.postgres;
 
 import com.crypto212.idgenerator.SnowFlake;
-import com.crypto212.wallet.repository.AssetRepository;
-import com.crypto212.wallet.repository.entity.AssetEntity;
+import com.crypto212.userwallet.repository.AssetRepository;
+import com.crypto212.userwallet.repository.entity.AssetEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,8 +26,10 @@ public class PostgresAssetRepository implements AssetRepository {
     }
 
     @Override
-    public Optional<AssetEntity> getAssetByAssetSymbol() {
-        return Optional.empty();
+    public Optional<AssetEntity> getAssetByAssetSymbol(String assetSymbol) {
+        List<AssetEntity> assetEntities = jdbcTemplate
+                .query(Queries.GET_ASSET, (rs, rowNum) -> assetEntityFromResultSet(rs), assetSymbol);
+        return !assetEntities.isEmpty() ? Optional.of(assetEntities.get(0)) : Optional.empty();
     }
 
     @Override
@@ -51,10 +54,27 @@ public class PostgresAssetRepository implements AssetRepository {
     @Override
     public List<AssetEntity> getAllAssets() {
         return jdbcTemplate.query(Queries.GET_ALL_ASSETS,
-                (rs, rowNum) -> AssetEntityFromResultSet(rs));
+                (rs, rowNum) -> assetEntityFromResultSet(rs));
     }
 
-    private AssetEntity AssetEntityFromResultSet(ResultSet rs) throws SQLException {
+    @Override
+    public BigDecimal getTotalAssetBalance(String assetSymbol) {
+        return jdbcTemplate.queryForObject(Queries.GET_ASSET_BALANCE,
+                (rs, rowNum) -> rs.getBigDecimal("total_user_amount"), assetSymbol);
+    }
+
+    @Override
+    public void updateAssetBalance(Long assetId, BigDecimal amount) {
+        jdbcTemplate.update(conn -> {
+            PreparedStatement ps = conn.prepareStatement(
+                    Queries.UPDATE_ASSET_BALANCE);
+            ps.setBigDecimal(1, amount);
+            ps.setLong(2, assetId);
+            return ps;
+        });
+    }
+
+    private AssetEntity assetEntityFromResultSet(ResultSet rs) throws SQLException {
         return AssetEntity
                 .builder()
                 .id(rs.getLong("id"))
@@ -68,7 +88,14 @@ public class PostgresAssetRepository implements AssetRepository {
     private static class Queries {
         private static final String INSERT_ASSET = "INSERT INTO assets(id, asset_symbol, asset_name, created_at, updated_at)" +
                 " VALUES (?, ?, ?, ?, ?)";
+
+        private static final String GET_ASSET = "SELECT id, asset_symbol, asset_name, created_at, updated_at " +
+                "FROM assets WHERE asset_symbol = ?";
         private static final String GET_ALL_ASSETS = "SELECT id, asset_symbol, asset_name, created_at, updated_at" +
                 " FROM assets";
+
+        private static final String GET_ASSET_BALANCE = "SELECT total_user_amount FROM assets WHERE asset_symbol = ?";
+        private static final String UPDATE_ASSET_BALANCE = "UPDATE assets SET total_user_amount = total_user_amount + ? " +
+                "WHERE id = ?";
     }
 }

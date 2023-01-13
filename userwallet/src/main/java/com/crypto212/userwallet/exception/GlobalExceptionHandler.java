@@ -1,4 +1,4 @@
-package com.crypto212.wallet.exception;
+package com.crypto212.userwallet.exception;
 
 import com.crypto212.shared.dto.ResponseDTO;
 import com.crypto212.shared.exception.ApiException;

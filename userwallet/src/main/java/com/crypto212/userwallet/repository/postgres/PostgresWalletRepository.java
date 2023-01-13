@@ -1,9 +1,10 @@
-package com.crypto212.wallet.repository.postgres;
+package com.crypto212.userwallet.repository.postgres;
 
-import com.crypto212.wallet.repository.WalletRepository;
-import com.crypto212.wallet.repository.entity.AssetEntity;
-import com.crypto212.wallet.repository.entity.WalletAssetEntity;
-import com.crypto212.wallet.repository.entity.WalletEntity;
+import com.crypto212.idgenerator.SnowFlake;
+import com.crypto212.userwallet.repository.WalletRepository;
+import com.crypto212.userwallet.repository.entity.AssetEntity;
+import com.crypto212.userwallet.repository.entity.WalletAssetEntity;
+import com.crypto212.userwallet.repository.entity.WalletEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +12,8 @@ import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -19,9 +22,11 @@ import java.util.Set;
 @Repository
 public class PostgresWalletRepository implements WalletRepository {
     private final JdbcTemplate jdbcTemplate;
+    private final SnowFlake snowFlake;
 
-    public PostgresWalletRepository(JdbcTemplate jdbcTemplate) {
+    public PostgresWalletRepository(JdbcTemplate jdbcTemplate, SnowFlake snowFlake) {
         this.jdbcTemplate = jdbcTemplate;
+        this.snowFlake = snowFlake;
     }
 
     @Override
@@ -52,14 +57,48 @@ public class PostgresWalletRepository implements WalletRepository {
     @Override
     public Optional<WalletAssetEntity> getUserWalletAsset(Long walletId, String assetSymbol) {
         List<WalletAssetEntity> walletAssetEntities = jdbcTemplate
-                .query(Queries.GET_WALLET_ASSET, (rs, rowNum) -> walletAssetFromResultSet(rs), walletId, assetSymbol);
+                .query(Queries.GET_USER_WALLET_ASSET, (rs, rowNum) -> walletAssetFromResultSet(rs), walletId, assetSymbol);
         return !walletAssetEntities.isEmpty() ? Optional.of(walletAssetEntities.get(0)) : Optional.empty();
     }
 
     @Override
-    public BigDecimal getTotalUserAssetBalance(String assetName) {
-        return jdbcTemplate.queryForObject(Queries.GET_TOTAL_USERS_ASSET, (rs, rowNum) -> rs.getBigDecimal(assetName), assetName);
+    public WalletEntity createWalletForUser(Long userId) {
+        long id = snowFlake.nextId();
+        LocalDateTime currenTime = LocalDateTime.now();
+        jdbcTemplate.update(conn -> {
+            PreparedStatement ps = conn.prepareStatement(Queries.CREATE_USER_WALLET);
+            ps.setLong(1, id);
+            ps.setLong(2, userId);
+            ps.setTimestamp(3, Timestamp.valueOf(currenTime));
+            ps.setTimestamp(4, Timestamp.valueOf(currenTime));
+            return ps;
+        });
+        return WalletEntity
+                .builder()
+                .id(id)
+                .userId(userId)
+                .createdAt(currenTime)
+                .updatedAt(currenTime)
+                .build();
     }
+
+    @Override
+    public WalletAssetEntity createWalletAssetForUser(Long walletId, AssetEntity assetEntity) {
+        jdbcTemplate.update(conn -> {
+            PreparedStatement ps = conn.prepareStatement(Queries.CREATE_USER_WALLET_ASSET);
+            ps.setLong(1, walletId);
+            ps.setLong(2, assetEntity.getId());
+            ps.setBigDecimal(3, BigDecimal.ZERO);
+            return ps;
+        });
+        //TODO: fix relation
+        return WalletAssetEntity
+                .builder()
+                .assetEntity(assetEntity)
+                .amount(BigDecimal.ZERO)
+                .build();
+    }
+
 
     private WalletAssetEntity walletAssetFromResultSet(ResultSet rs) throws SQLException {
         return WalletAssetEntity
@@ -67,7 +106,7 @@ public class PostgresWalletRepository implements WalletRepository {
                 .assetEntity(
                         AssetEntity
                                 .builder()
-                                .id(rs.getLong("asset_id"))
+                                .id(rs.getLong("id"))
                                 .assetName(rs.getString("asset_name"))
                                 .assetSymbol(rs.getString("asset_symbol"))
                                 .createdAt(rs.getTimestamp("created_at").toLocalDateTime())
@@ -89,19 +128,23 @@ public class PostgresWalletRepository implements WalletRepository {
     }
 
     private static class Queries {
-        private static final String GET_TOTAL_USERS_ASSET = "SELECT ? FROM user_assets";
         private static final String UPDATE_USER_ASSET = "UPDATE  wallets_assets SET amount = ? " +
                 "WHERE wallet_id = ? AND asset_id = ?";
         private static final String GET_USER_WALLET = "SELECT id, user_id, created_at, updated_at " +
                 "FROM wallets " +
                 "WHERE user_id = ?";
-        private static final String GET_WALLET_ASSET = "SELECT ws.user_id, ws.amount, a.asset_symbol, " +
-                "a.id FROM wallets_assets as ws " +
+
+        private static final String CREATE_USER_WALLET = "INSERT INTO wallets(id, user_id, created_at, updated_at) " +
+                "VALUES (?, ?, ?, ?)";
+
+        private static final String CREATE_USER_WALLET_ASSET = "INSERT INTO wallets_assets(wallet_id, asset_id, amount) " +
+                "VALUES (?, ?, ?)";
+        private static final String GET_USER_WALLET_ASSET = "SELECT ws.amount, a.asset_symbol, " +
+                "a.id, a.asset_name, a.created_at, a.updated_at FROM wallets_assets as ws " +
                 "JOIN assets as a ON (a.id=ws.asset_id) " +
                 "WHERE ws.wallet_id = ? AND a.asset_symbol = ?";
-        private static final String GET_ASSETS_FOR_WALLET = "SELECT ws.wallet_id, ws.asset_id, ws.amount," +
-                " a.asset_name, a.asset_symbol, " +
-                "a.created_at, a.updated_at FROM wallets_assets AS ws " +
+        private static final String GET_ASSETS_FOR_WALLET = "SELECT ws.wallet_id, ws.asset_id, ws.amount, " +
+                "a.id,  a.asset_name, a.asset_symbol, a.created_at, a.updated_at FROM wallets_assets AS ws " +
                 "JOIN assets AS a ON (a.id=ws.asset_id) " +
                 "WHERE ws.wallet_id = ?";
     }

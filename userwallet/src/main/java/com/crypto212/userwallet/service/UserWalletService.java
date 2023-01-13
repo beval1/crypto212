@@ -1,12 +1,12 @@
-package com.crypto212.wallet.service;
+package com.crypto212.userwallet.service;
 
-import com.crypto212.clients.userwallet.TotalUserAssetDTO;
-import com.crypto212.clients.userwallet.UserWalletClient;
 import com.crypto212.shared.exception.ApiException;
-import com.crypto212.wallet.repository.WalletRepository;
-import com.crypto212.wallet.repository.entity.WalletAssetEntity;
-import com.crypto212.wallet.repository.entity.WalletEntity;
-import com.crypto212.wallet.service.dto.WalletDTO;
+import com.crypto212.userwallet.repository.AssetRepository;
+import com.crypto212.userwallet.repository.WalletRepository;
+import com.crypto212.userwallet.repository.entity.AssetEntity;
+import com.crypto212.userwallet.repository.entity.WalletAssetEntity;
+import com.crypto212.userwallet.repository.entity.WalletEntity;
+import com.crypto212.userwallet.service.dto.WalletDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -20,31 +20,43 @@ public class UserWalletService {
     private final WalletRepository walletRepository;
     private final ModelMapper modelMapper;
     private final TransactionTemplate transactionTemplate;
+    private final AssetRepository assetRepository;
 
-    public UserWalletService(WalletRepository walletRepository, ModelMapper modelMapper, TransactionTemplate transactionTemplate) {
+    public UserWalletService(WalletRepository walletRepository, ModelMapper modelMapper, TransactionTemplate transactionTemplate, AssetRepository assetRepository) {
         this.walletRepository = walletRepository;
         this.modelMapper = modelMapper;
         this.transactionTemplate = transactionTemplate;
+        this.assetRepository = assetRepository;
     }
 
     public WalletDTO getWallet(Long userId) {
-        WalletEntity walletEntity = walletRepository.getWallet(userId).orElseThrow(
-                () -> new ApiException(HttpStatus.NOT_FOUND, "Wallet Not Found!"));
+        //get user wallet or create new one
+        WalletEntity walletEntity = walletRepository.getWallet(userId).orElseGet(() -> createWallerForUser(userId));
         Set<WalletAssetEntity> walletAssetEntities = walletRepository.getAllAssetsForWallet(walletEntity.getId());
         walletEntity.setWalletAssets(walletAssetEntities);
         return modelMapper.map(walletEntity, WalletDTO.class);
     }
 
+    private WalletEntity createWallerForUser(Long userId) {
+        return walletRepository.createWalletForUser(userId);
+    }
+    private WalletAssetEntity createWalletAssetForUser(Long walletId, String assetSymbol) {
+        AssetEntity assetEntity = assetRepository.getAssetByAssetSymbol(assetSymbol).orElseThrow(
+                () -> new ApiException(HttpStatus.BAD_REQUEST, "Asset doesn't exist!"));
+        return walletRepository.createWalletAssetForUser(walletId, assetEntity);
+    }
+
     public void exchange(Long walletId, String baseCurrency, String quoteCurrency, String baseCurrencyAmountToBuy,
                          String quoteCurrencyAmountToSell) {
+        //create asset if not exists
         WalletAssetEntity baseCurrencyAsset = walletRepository.getUserWalletAsset(walletId, baseCurrency).
-                orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Asset not found!"));
+                orElseGet(() -> createWalletAssetForUser(walletId, baseCurrency));
         BigDecimal currentUserBaseCurrencyAmount = baseCurrencyAsset.getAmount();
         BigDecimal amountToBuy = new BigDecimal(baseCurrencyAmountToBuy);
         BigDecimal finalBaseCurrencyAmount = currentUserBaseCurrencyAmount.add(amountToBuy);
 
-        WalletAssetEntity quoteCurrencyAsset = walletRepository.getUserWalletAsset(walletId, baseCurrency).
-                orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Asset not found!"));
+        WalletAssetEntity quoteCurrencyAsset = walletRepository.getUserWalletAsset(walletId, quoteCurrency).
+                orElseGet(() -> createWalletAssetForUser(walletId, quoteCurrency));
         BigDecimal currentQuoteCurrencyAmount = quoteCurrencyAsset.getAmount();
         BigDecimal amountToSell = new BigDecimal(quoteCurrencyAmountToSell);
         BigDecimal finalQuoteCurrencyAmount = currentQuoteCurrencyAmount.subtract(amountToSell);
@@ -56,12 +68,9 @@ public class UserWalletService {
         transactionTemplate.execute((status) -> {
             walletRepository.updateUserAsset(walletId, baseCurrencyAsset.getAssetEntity().getId(), finalBaseCurrencyAmount);
             walletRepository.updateUserAsset(walletId, quoteCurrencyAsset.getAssetEntity().getId(), finalQuoteCurrencyAmount);
+            assetRepository.updateAssetBalance(baseCurrencyAsset.getAssetEntity().getId(), amountToBuy);
+            assetRepository.updateAssetBalance(quoteCurrencyAsset.getAssetEntity().getId(), amountToSell);
             return status;
         });
-    }
-
-    public TotalUserAssetDTO totalUserAssetBalance(String assetName) {
-        BigDecimal balance = walletRepository.getTotalUserAssetBalance(assetName);
-        return new TotalUserAssetDTO(balance);
     }
 }

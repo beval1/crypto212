@@ -1,9 +1,8 @@
-package com.crypto212.wallet.web;
+package com.crypto212.userwallet.web;
 
-import com.crypto212.clients.userwallet.TotalUserAssetDTO;
 import com.crypto212.shared.dto.ResponseDTO;
-import com.crypto212.wallet.service.UserWalletService;
-import com.crypto212.wallet.service.dto.WalletDTO;
+import com.crypto212.userwallet.service.UserWalletService;
+import com.crypto212.userwallet.service.dto.WalletDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -48,10 +47,5 @@ public class UserWalletController {
                         .build());
     }
 
-    @GetMapping("/total-balance/{assetName}")
-    public ResponseEntity<TotalUserAssetDTO> totalUserAssetBalance(@PathVariable("assetName") String assetName) {
-        TotalUserAssetDTO totalUserAssetDTO =walletService.totalUserAssetBalance(assetName);
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(totalUserAssetDTO);
-    }
+
 }

@@ -1,4 +1,4 @@
-package com.crypto212.wallet.service.dto;
+package com.crypto212.userwallet.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

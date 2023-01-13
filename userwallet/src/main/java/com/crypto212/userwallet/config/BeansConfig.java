@@ -1,4 +1,4 @@
-package com.crypto212.wallet.config;
+package com.crypto212.userwallet.config;
 
 import com.crypto212.idgenerator.SnowFlake;
 import org.modelmapper.ModelMapper;

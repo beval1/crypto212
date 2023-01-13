@@ -9,6 +9,7 @@ CREATE TABLE ASSETS (
     id BIGINT PRIMARY KEY ,
     asset_symbol VARCHAR(5) UNIQUE ,
     asset_name VARCHAR(30) UNIQUE ,
+    total_user_amount DECIMAL(21, 12) NOT NULL DEFAULT 0 ,
     created_at TIMESTAMP NOT NULL ,
     updated_at TIMESTAMP NOT NULL
 );

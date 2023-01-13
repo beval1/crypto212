@@ -1,7 +1,8 @@
-package com.crypto212.wallet.repository;
+package com.crypto212.userwallet.repository;
 
-import com.crypto212.wallet.repository.entity.WalletAssetEntity;
-import com.crypto212.wallet.repository.entity.WalletEntity;
+import com.crypto212.userwallet.repository.entity.AssetEntity;
+import com.crypto212.userwallet.repository.entity.WalletAssetEntity;
+import com.crypto212.userwallet.repository.entity.WalletEntity;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -14,5 +15,8 @@ public interface WalletRepository {
     void updateUserAsset(Long walletId, Long assetId, BigDecimal amount);
 
     Optional<WalletAssetEntity> getUserWalletAsset(Long walletId, String assetSymbol);
-    BigDecimal getTotalUserAssetBalance(String assetName);
+
+    WalletEntity createWalletForUser(Long userId);
+
+    WalletAssetEntity createWalletAssetForUser(Long walletId, AssetEntity assetEntity);
 }

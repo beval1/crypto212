@@ -1,7 +1,7 @@
 package com.crypto212.privatewallet.web;
 
-import com.crypto212.privatewallet.service.WalletService;
 import com.crypto212.clients.privatewallet.AssetBalanceDTO;
+import com.crypto212.privatewallet.service.WalletService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

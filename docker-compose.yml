@@ -53,6 +53,7 @@ services:
       - spring
     depends_on:
       - zipkin
+    restart: unless-stopped
   apigw:
     image: bobo91280/apigw:latest
     container_name: apigw

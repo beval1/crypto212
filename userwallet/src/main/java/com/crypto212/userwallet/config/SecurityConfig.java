@@ -1,4 +1,4 @@
-package com.crypto212.wallet.config;
+package com.crypto212.userwallet.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

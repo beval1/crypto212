@@ -17,8 +17,9 @@ public class SecurityValidationService {
     }
 
     public boolean isWalletOwner(Long userId, Long walletId){
+        //Don't indicate if such wallet/user exists
         WalletEntity walletEntity = postgresWalletRepository.getWallet(userId).orElseThrow(
-                () -> new ApiException(HttpStatus.BAD_REQUEST, "Wallet doesn't exist"));
+                () -> new ApiException(HttpStatus.FORBIDDEN, "No permission!"));
         return Objects.equals(walletEntity.getId(), walletId);
     }
 }

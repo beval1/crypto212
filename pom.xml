@@ -10,8 +10,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>customer</module>
-        <module>fraud</module>
         <module>eureka-server</module>
         <module>shared</module>
         <module>notification</module>
@@ -21,6 +19,7 @@
         <module>userwallet</module>
         <module>privatewallet</module>
         <module>marketengine</module>
+        <module>payment</module>
     </modules>
 
     <name>crypto212</name>

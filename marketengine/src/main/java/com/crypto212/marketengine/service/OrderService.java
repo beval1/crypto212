@@ -34,7 +34,7 @@ public class OrderService {
         String baseCurrencyName = CurrencyPairs.currencyPairs.get(currencyPair).get(0);
         String quoteCurrencyName = CurrencyPairs.currencyPairs.get(currencyPair).get(1);
 
-        //get latest price of asset
+        //get the latest price of asset
         TickerStatistics tickerStatistics = binanceApiRestClient.get24HrPriceStatistics(currencyPair);
         BigDecimal latestPriceForBaseCurrencyInQuoteCurrency = new BigDecimal(tickerStatistics.getLastPrice());
 
@@ -58,11 +58,10 @@ public class OrderService {
     }
 
     private void checkLiquidity(String baseCurrencyName, BigDecimal amount){
-        //TODO: check asset based on order type
         //get private wallet total asset amount
         ResponseEntity<AssetBalanceDTO> privateWalletResponse = privateWalletClient
                 .getWalletAssetAmount(baseCurrencyName);
-        BigDecimal totalBaseCurrencyBalance = privateWalletResponse.getBody().getBalance();
+        BigDecimal totalBaseCurrencyBalance = new BigDecimal(privateWalletResponse.getBody().getBalance());
 
         //get user wallet total user assets
         ResponseEntity<TotalUserAssetDTO> userWalletResponse = userWalletClient
@@ -74,7 +73,7 @@ public class OrderService {
         boolean enoughBaseCurrency = freeBalance.subtract(amount).compareTo(BigDecimal.ZERO) >= 1;
 
         if (!enoughBaseCurrency) {
-            throw new ApiException(HttpStatus.BAD_REQUEST, "Not enough liquidity to perform this order");
+            throw new ApiException(HttpStatus.BAD_REQUEST, "Not enough liquidity to create this order");
         }
     }
 

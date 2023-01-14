@@ -67,7 +67,7 @@ public class UserWalletService {
 
         BigDecimal totalBaseCurrencyUserAmount = assetRepository.getTotalAssetBalance(baseCurrency);
         BigDecimal totalQuoteCurrencyUserAmount = assetRepository.getTotalAssetBalance(quoteCurrency);
-        transactionTemplate.execute((status) -> {
+        transactionTemplate.execute(status -> {
             walletRepository.updateUserAsset(walletId, baseCurrencyAsset.getAssetEntity().getId(), finalBaseCurrencyAmount);
             walletRepository.updateUserAsset(walletId, quoteCurrencyAsset.getAssetEntity().getId(), finalQuoteCurrencyAmount);
             assetRepository.updateAssetBalance(baseCurrencyAsset.getAssetEntity().getId(),

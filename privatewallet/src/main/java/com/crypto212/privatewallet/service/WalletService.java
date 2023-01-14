@@ -10,20 +10,20 @@ import java.math.BigDecimal;
 @Slf4j
 @Service
 public class WalletService {
-    private final ContractOperations contractOperations;
+    private final ContractOperationsService contractOperationsService;
 
-    public WalletService(ContractOperations contractOperations) {
-        this.contractOperations = contractOperations;
+    public WalletService(ContractOperationsService contractOperationsService) {
+        this.contractOperationsService = contractOperationsService;
     }
 
     public AssetBalanceDTO getWalletAsset(String assetName) {
         BigDecimal result = null;
         try {
-            result = contractOperations.getBalance(assetName);
+            result = contractOperationsService.getBalance(assetName);
         } catch (IOException e) {
             e.printStackTrace();
         }
         log.info("{} balance for {}", assetName, result);
-        return new AssetBalanceDTO(result);
+        return new AssetBalanceDTO(result.toPlainString());
     }
 }

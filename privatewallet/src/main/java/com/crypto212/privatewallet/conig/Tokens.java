@@ -1,5 +1,7 @@
 package com.crypto212.privatewallet.conig;
 
+import org.web3j.utils.Convert;
+
 import java.util.Map;
 
 public class Tokens {
@@ -17,5 +19,11 @@ public class Tokens {
             Map.entry("WETH", "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6"),
             Map.entry("UNI", "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"),
             Map.entry("USDT", "0x07865c6e87b9f70255377e024ace6630c1eaa37f")
+    );
+
+    public static final Map<String, Convert.Unit> testnetTokensUnit = Map.ofEntries(
+            Map.entry("WETH", Convert.Unit.ETHER),
+            Map.entry("UNI", Convert.Unit.ETHER),
+            Map.entry("USDT", Convert.Unit.MWEI)
     );
 }

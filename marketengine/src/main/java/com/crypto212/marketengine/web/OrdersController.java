@@ -26,7 +26,7 @@ public class OrdersController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(ResponseDTO
                         .builder()
-                        .message("Order created successfully!")
+                        .message("Order processed successfully!")
                         .content(null)
                         .build());
     }

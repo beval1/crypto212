@@ -15,12 +15,13 @@ public class OrdersController {
         this.orderService = orderService;
     }
 
-    @PostMapping("/{currencyPair}")
-    public ResponseEntity<ResponseDTO> createOrder(@RequestHeader("X-User-Id") Long userId,
-                                                   @PathVariable("currencyPair") String currencyPair,
-                                                   @RequestParam("actionType") String actionType,
-                                                   @RequestParam("amount") String amount){
-        orderService.createOrder(userId, currencyPair, actionType, amount);
+    @PostMapping("/{currencyPair}/{actionType}")
+    public ResponseEntity<ResponseDTO> createBuyOrder(@RequestHeader("X-User-Id") Long userId,
+                                                      @PathVariable("currencyPair") String currencyPair,
+                                                      @PathVariable("actionType") String actionType,
+                                                      @RequestParam("walletId") Long walletId,
+                                                      @RequestParam("amount") String amount) {
+        orderService.exchange(walletId, currencyPair, actionType, amount, userId);
 
         return ResponseEntity.status(HttpStatus.OK)
                 .body(ResponseDTO
@@ -29,4 +30,5 @@ public class OrdersController {
                         .content(null)
                         .build());
     }
+
 }

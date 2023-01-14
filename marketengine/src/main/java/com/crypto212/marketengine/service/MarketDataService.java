@@ -1,36 +1,32 @@
 package com.crypto212.marketengine.service;
 
-import com.binance.connector.client.impl.spot.Market;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.binance.api.client.BinanceApiRestClient;
+import com.binance.api.client.domain.market.Candlestick;
+import com.binance.api.client.domain.market.CandlestickInterval;
+import com.crypto212.shared.exception.ApiException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
-import java.util.LinkedHashMap;
+import java.util.Arrays;
+import java.util.List;
 
 @Service
 public class MarketDataService {
-    private final Market market;
-    private final ObjectMapper objectMapper;
+    private final BinanceApiRestClient binanceApiRestClient;
 
-    public MarketDataService(Market market, ObjectMapper objectMapper) {
-        this.market = market;
-        this.objectMapper = objectMapper;
+    public MarketDataService(BinanceApiRestClient binanceApiRestClient) {
+        this.binanceApiRestClient = binanceApiRestClient;
     }
 
-    public String getMarketCandlesForSymbol(String asset, String interval, String startTime, String endTime)  {
-        LinkedHashMap<String, Object> params = new LinkedHashMap<>();
-        params.put("symbol", asset);
-        params.put("interval", "1h");
-        params.put("startTime", Date.valueOf("2023-01-08").getTime());
-        params.put("endTime", Date.valueOf("2023-01-09").getTime());
-        String response = market.klines(params);
-//        try {
-//            List<List<String>> list =  objectMapper.readValue(response, new TypeReference<>() {});
-//            return objectMapper.readValue(response, CandleArrayDTO.class);
-//        } catch (JsonProcessingException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-        return response;
+    public List<Candlestick> getMarketCandlesForSymbol(String asset, String interval, String startTime,
+                                                       String endTime, int limit) {
+        long startTimeLong = Date.valueOf(startTime).getTime();
+        long endTimeLong = Date.valueOf(endTime).getTime();
+        CandlestickInterval candlestickInterval = Arrays.stream(CandlestickInterval.values())
+                .filter(constant -> constant.getIntervalId().equals(interval))
+                .findFirst()
+                .orElseThrow(() -> new ApiException(HttpStatus.BAD_REQUEST, "Bad Interval"));
+        return binanceApiRestClient.getCandlestickBars(asset, candlestickInterval, limit, startTimeLong, endTimeLong);
     }
 }

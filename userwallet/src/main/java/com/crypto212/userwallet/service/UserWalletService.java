@@ -65,11 +65,15 @@ public class UserWalletService {
                     String.format("User does not have enough of %s amount to perform the operation", quoteCurrency));
         }
 
+        BigDecimal totalBaseCurrencyUserAmount = assetRepository.getTotalAssetBalance(baseCurrency);
+        BigDecimal totalQuoteCurrencyUserAmount = assetRepository.getTotalAssetBalance(quoteCurrency);
         transactionTemplate.execute((status) -> {
             walletRepository.updateUserAsset(walletId, baseCurrencyAsset.getAssetEntity().getId(), finalBaseCurrencyAmount);
             walletRepository.updateUserAsset(walletId, quoteCurrencyAsset.getAssetEntity().getId(), finalQuoteCurrencyAmount);
-            assetRepository.updateAssetBalance(baseCurrencyAsset.getAssetEntity().getId(), amountToBuy);
-            assetRepository.updateAssetBalance(quoteCurrencyAsset.getAssetEntity().getId(), amountToSell);
+            assetRepository.updateAssetBalance(baseCurrencyAsset.getAssetEntity().getId(),
+                    totalBaseCurrencyUserAmount.add(amountToBuy));
+            assetRepository.updateAssetBalance(quoteCurrencyAsset.getAssetEntity().getId(),
+                    totalQuoteCurrencyUserAmount.subtract(amountToSell));
             return status;
         });
     }

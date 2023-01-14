@@ -95,7 +95,7 @@ public class PostgresAssetRepository implements AssetRepository {
                 " FROM assets";
 
         private static final String GET_ASSET_BALANCE = "SELECT total_user_amount FROM assets WHERE asset_symbol = ?";
-        private static final String UPDATE_ASSET_BALANCE = "UPDATE assets SET total_user_amount = total_user_amount + ? " +
+        private static final String UPDATE_ASSET_BALANCE = "UPDATE assets SET total_user_amount = ? " +
                 "WHERE id = ?";
     }
 }

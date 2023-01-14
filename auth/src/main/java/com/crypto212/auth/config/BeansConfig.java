@@ -1,6 +1,7 @@
 package com.crypto212.auth.config;
 
 import com.crypto212.idgenerator.SnowFlake;
+import com.crypto212.shared.exception.GlobalExceptionHandler;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +36,11 @@ public class BeansConfig {
     @Bean
     public SnowFlake snowFlake(){
         return new SnowFlake(snowflakeWorkerId);
+    }
+
+    @Bean
+    public GlobalExceptionHandler globalExceptionHandler(){
+        return new GlobalExceptionHandler();
     }
 
 }

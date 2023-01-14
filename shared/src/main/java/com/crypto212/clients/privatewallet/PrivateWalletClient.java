@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 )
 public interface PrivateWalletClient {
 
-    @GetMapping("api/v1/privatewallet/{assetName}")
+    @GetMapping("api/v1/private-wallet/{assetName}")
     ResponseEntity<AssetBalanceDTO> getWalletAssetAmount(@PathVariable("assetName") String assetName);
 }

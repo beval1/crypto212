@@ -31,8 +31,10 @@ public class UserWalletController {
                         .build());
     }
 
+    @PreAuthorize("@securityValidationService.isWalletOwner(#userId, #walletId)")
     @PostMapping("/{walletId}/exchange")
-    public ResponseEntity<ResponseDTO> exchangeFunds(@PathVariable("walletId") Long walletId,
+    public ResponseEntity<ResponseDTO> exchangeFunds(@RequestHeader("X-User-Id") Long userId,
+                                                     @PathVariable("walletId") Long walletId,
                                                      @RequestParam("baseCurrency") String baseCurrency,
                                                      @RequestParam("quoteCurrency") String quoteCurrency,
                                                      @RequestParam("amountToBuy") String amountToBuy,

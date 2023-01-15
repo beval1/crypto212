@@ -13,4 +13,7 @@ public class WalletConfig {
     private String protocolNetwork;
     @Value("${app.web3.wallet-address}")
     private String walletAddress;
+
+    @Value("${app.web3.wallet-private-key}")
+    private String walletPrivateKey;
 }

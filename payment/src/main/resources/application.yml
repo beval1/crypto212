@@ -1,0 +1,24 @@
+app:
+  stripe:
+    apiKey: ${STRIPE_API_KEY}
+    secretKey: ${STRIPE_SECRET_KEY}
+    webHookSecret: ${STRIPE_WEBHOOK_SECRET}
+    successUrl: http://google.com
+    cancelUrl: http://yahoo.com
+server:
+  port: 8088
+
+spring:
+  application:
+    name: payment
+  zipkin:
+    base-url: http://localhost:9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+
+

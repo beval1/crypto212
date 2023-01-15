@@ -77,4 +77,19 @@ public class UserWalletService {
             return status;
         });
     }
+
+    public void addAssets(Long userId, String assetSymbol, String amount) {
+        WalletEntity walletEntity = walletRepository.getWallet(userId).orElseGet(() -> createWallerForUser(userId));
+        Long walletId = walletEntity.getId();
+        WalletAssetEntity userCurrencyAsset = walletRepository.getUserWalletAsset(walletId, assetSymbol).
+                orElseGet(() -> createWalletAssetForUser(walletId, assetSymbol));
+        BigDecimal totalCurrencyUserAmount = assetRepository.getTotalAssetBalance(assetSymbol);
+        transactionTemplate.execute(status -> {
+            walletRepository.updateUserAsset(walletId, userCurrencyAsset.getAssetEntity().getId(),
+                    userCurrencyAsset.getAmount().add(new BigDecimal(amount)));
+            assetRepository.updateAssetBalance(userCurrencyAsset.getAssetEntity().getId(),
+                    totalCurrencyUserAmount.add(new BigDecimal(amount)));
+            return status;
+        });
+    }
 }

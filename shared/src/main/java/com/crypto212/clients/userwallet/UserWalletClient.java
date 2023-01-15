@@ -11,13 +11,18 @@ import org.springframework.web.bind.annotation.*;
 )
 public interface UserWalletClient {
     @GetMapping("api/v1/assets/{assetName}")
-    public ResponseEntity<TotalUserAssetDTO> totalUserAssetBalance(@PathVariable("assetName") String assetName);
+    ResponseEntity<TotalUserAssetDTO> totalUserAssetBalance(@PathVariable("assetName") String assetName);
 
     @PostMapping("api/v1/wallet/{walletId}/exchange")
-    public ResponseEntity<ResponseDTO> exchangeFunds(@RequestHeader("X-User-Id") Long userId,
+    ResponseEntity<ResponseDTO> exchangeFunds(@RequestHeader("X-User-Id") Long userId,
                                                      @PathVariable("walletId") Long walletId,
                                                      @RequestParam("baseCurrency") String baseCurrency,
                                                      @RequestParam("quoteCurrency") String quoteCurrency,
                                                      @RequestParam("amountToBuy") String amountToBuy,
                                                      @RequestParam("amountToSell") String amountToSell);
+
+    @PostMapping("api/v1/wallet/add/{assetSymbol}")
+    ResponseEntity addAssets(@RequestHeader("X-User-Id") Long userId,
+                                  @PathVariable("assetSymbol") String assetSymbol,
+                                  @RequestParam("amount") String amount);
 }

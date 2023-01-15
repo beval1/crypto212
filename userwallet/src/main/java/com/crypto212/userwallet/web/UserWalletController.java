@@ -49,5 +49,15 @@ public class UserWalletController {
                         .build());
     }
 
+    @PostMapping("/add/{assetSymbol}")
+    public ResponseEntity addAssets(@RequestHeader("X-User-Id") Long userId,
+                                  @PathVariable("assetSymbol") String assetSymbol,
+                                  @RequestParam("amount") String amount) {
+        walletService.addAssets(userId, assetSymbol, amount);
+
+        return ResponseEntity
+                .status(HttpStatus.OK).build();
+    }
+
 
 }

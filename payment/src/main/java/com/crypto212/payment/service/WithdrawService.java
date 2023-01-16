@@ -12,6 +12,7 @@ public class WithdrawService {
     }
 
     public void sendWithdrawRequest(Long userId, Long walletId, String assetSymbol, String amount, String address){
+        //TODO: implement message queue
         userWalletClient.withdrawFunds(userId, walletId, assetSymbol, amount, address);
     }
 }

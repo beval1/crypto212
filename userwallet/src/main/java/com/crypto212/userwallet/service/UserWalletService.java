@@ -51,8 +51,8 @@ public class UserWalletService {
         return walletRepository.createWalletAssetForUser(walletId, assetEntity);
     }
 
-    public void exchange(Long walletId, String baseCurrency, String quoteCurrency, String baseCurrencyAmountToBuy,
-                         String quoteCurrencyAmountToSell) {
+    public void exchange(Long userId, Long walletId, String baseCurrency, String quoteCurrency,
+                         String baseCurrencyAmountToBuy, String quoteCurrencyAmountToSell) {
         //create asset if not exists
         WalletAssetEntity baseCurrencyAsset = walletRepository.getUserWalletAsset(walletId, baseCurrency).
                 orElseGet(() -> createWalletAssetForUser(walletId, baseCurrency));
@@ -98,7 +98,7 @@ public class UserWalletService {
         });
     }
 
-    public void withdraw(Long walletId, String assetSymbol, String amount, String toAddress) {
+    public void withdraw(Long userId, Long walletId, String assetSymbol, String amount, String toAddress) {
         WalletAssetEntity walletAssetEntity = walletRepository.getUserWalletAsset(walletId, assetSymbol).
                 orElseGet(() -> createWalletAssetForUser(walletId, assetSymbol));
         BigDecimal decimalAmount = new BigDecimal(amount);

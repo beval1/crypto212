@@ -31,6 +31,12 @@ spring:
                 - Path=/api/v1/payment/**
               filters:
                 - name: JwtAuthenticationFilter
+            - id: ledger
+              uri: lb://LEDGER
+              predicates:
+                - Path=/api/v1/ledger/**
+              filters:
+                - name: JwtAuthenticationFilter
 
 eureka:
     client:

@@ -37,7 +37,7 @@ public class UserWalletController {
                                                      @RequestParam("quoteCurrency") String quoteCurrency,
                                                      @RequestParam("amountToBuy") String amountToBuy,
                                                      @RequestParam("amountToSell") String amountToSell) {
-        walletService.exchange(walletId, baseCurrency, quoteCurrency, amountToBuy, amountToSell);
+        walletService.exchange(userId, walletId, baseCurrency, quoteCurrency, amountToBuy, amountToSell);
 
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -54,7 +54,7 @@ public class UserWalletController {
                                                      @RequestParam("assetSymbol") String assetSymbol,
                                                      @RequestParam("amount") String amount,
                                                      @RequestParam("address") String toAddress) {
-        walletService.withdraw(walletId, assetSymbol, amount, toAddress);
+        walletService.withdraw(userId, walletId, assetSymbol, amount, toAddress);
 
         return ResponseEntity
                 .status(HttpStatus.OK)

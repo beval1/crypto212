@@ -17,10 +17,8 @@ public class UserWalletController {
         this.walletService = walletService;
     }
 
-    @PreAuthorize("#header == #userId")
     @GetMapping
-    public ResponseEntity<ResponseDTO> getWallet(@RequestParam("userId") Long userId,
-                                                 @RequestHeader("X-User-Id") Long header) {
+    public ResponseEntity<ResponseDTO> getWallet(@RequestHeader("X-User-Id") Long userId) {
         WalletDTO walletDTO = walletService.getWallet(userId);
 
         return ResponseEntity
@@ -45,6 +43,23 @@ public class UserWalletController {
                 .status(HttpStatus.OK)
                 .body(ResponseDTO.builder()
                         .message("Funds exchanged successfully")
+                        .content(null)
+                        .build());
+    }
+
+    @PreAuthorize("@securityValidationService.isWalletOwner(#userId, #walletId)")
+    @PostMapping("/{walletId}/withdraw")
+    public ResponseEntity<ResponseDTO> withdrawFunds(@RequestHeader("X-User-Id") Long userId,
+                                                     @PathVariable("walletId") Long walletId,
+                                                     @RequestParam("assetSymbol") String assetSymbol,
+                                                     @RequestParam("amount") String amount,
+                                                     @RequestParam("address") String toAddress) {
+        walletService.withdraw(walletId, assetSymbol, amount, toAddress);
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(ResponseDTO.builder()
+                        .message("Funds withdrawn successfully")
                         .content(null)
                         .build());
     }

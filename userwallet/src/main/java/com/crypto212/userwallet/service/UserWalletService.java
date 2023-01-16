@@ -1,5 +1,6 @@
 package com.crypto212.userwallet.service;
 
+import com.crypto212.clients.privatewallet.PrivateWalletClient;
 import com.crypto212.shared.exception.ApiException;
 import com.crypto212.userwallet.repository.AssetRepository;
 import com.crypto212.userwallet.repository.WalletRepository;
@@ -21,12 +22,16 @@ public class UserWalletService {
     private final ModelMapper modelMapper;
     private final TransactionTemplate transactionTemplate;
     private final AssetRepository assetRepository;
+    private final PrivateWalletClient privateWalletClient;
 
-    public UserWalletService(WalletRepository walletRepository, ModelMapper modelMapper, TransactionTemplate transactionTemplate, AssetRepository assetRepository) {
+    public UserWalletService(WalletRepository walletRepository, ModelMapper modelMapper,
+                             TransactionTemplate transactionTemplate, AssetRepository assetRepository,
+                             PrivateWalletClient privateWalletClient) {
         this.walletRepository = walletRepository;
         this.modelMapper = modelMapper;
         this.transactionTemplate = transactionTemplate;
         this.assetRepository = assetRepository;
+        this.privateWalletClient = privateWalletClient;
     }
 
     public WalletDTO getWallet(Long userId) {
@@ -89,6 +94,26 @@ public class UserWalletService {
                     userCurrencyAsset.getAmount().add(new BigDecimal(amount)));
             assetRepository.updateAssetBalance(userCurrencyAsset.getAssetEntity().getId(),
                     totalCurrencyUserAmount.add(new BigDecimal(amount)));
+            return status;
+        });
+    }
+
+    public void withdraw(Long walletId, String assetSymbol, String amount, String toAddress) {
+        WalletAssetEntity walletAssetEntity = walletRepository.getUserWalletAsset(walletId, assetSymbol).
+                orElseGet(() -> createWalletAssetForUser(walletId, assetSymbol));
+        BigDecimal decimalAmount = new BigDecimal(amount);
+        if (walletAssetEntity.getAmount().compareTo(decimalAmount) < 0){
+            throw new ApiException(HttpStatus.BAD_REQUEST, "Not enough fund!");
+        }
+        BigDecimal totalCurrencyUserAmount = assetRepository.getTotalAssetBalance(assetSymbol);
+        transactionTemplate.execute(status -> {
+            walletRepository.updateUserAsset(walletId, walletAssetEntity.getAssetEntity().getId(),
+                    walletAssetEntity.getAmount().subtract(decimalAmount));
+            assetRepository.updateAssetBalance(walletAssetEntity.getAssetEntity().getId(),
+                    totalCurrencyUserAmount.subtract(decimalAmount));
+            //send withdraw request
+            privateWalletClient.withdraw(assetSymbol, amount, toAddress);
+            //TODO: update ledger
             return status;
         });
     }

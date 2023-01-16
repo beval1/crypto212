@@ -6,12 +6,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-//@EnableFeignClients(
-//        basePackages = "com.crypto212.clients"
-//)
-//@PropertySources({
-//        @PropertySource("classpath:clients-${spring.profiles.active}.properties")
-//})
 public class AuthApplication {
 
     public static void main(String[] args) {

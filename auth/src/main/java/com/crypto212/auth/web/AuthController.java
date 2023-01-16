@@ -59,18 +59,8 @@ public class AuthController {
     }
 
     @GetMapping("/token-claims")
-    public ResponseEntity<ResponseDTO> getTokenClaims(@RequestHeader("X-Auth-Token") String authToken) {
-        JwtTokenClaims jwtTokenClaims = authService.getTokenClaims(authToken);
-
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(
-                        ResponseDTO
-                                .builder()
-                                .message("Token claims fetched successfully!")
-                                .content(jwtTokenClaims)
-                                .build()
-                );
+    public JwtTokenClaims getTokenClaims(@RequestHeader("X-Auth-Token") String authToken) {
+        return authService.getTokenClaims(authToken);
     }
 }
 

@@ -1,3 +1,8 @@
-# Microservices
-![Screenshot 2021-11-30 at 12 32 51](https://user-images.githubusercontent.com/40702606/144061535-7a42e85b-59d6-4f7f-9c35-18a48b49e6de.png)
+# Crypto212
 
+## Functionality
+### -Users can Log In and Register
+### -Every User has it's own wallet with assets
+### -Every user can deposit money using stripe
+### -Users can place buy or sell orders - exchanging one asset for another
+### -Users can withdraw their assets to a crypto wallet (on the testnet)

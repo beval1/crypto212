@@ -9,7 +9,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/wallet")
+@RequestMapping("api/v1/userwallet/wallet")
 public class UserWalletController {
     private final UserWalletService walletService;
 

@@ -9,7 +9,7 @@ spring:
   datasource:
     password: password
     url: jdbc:postgresql://postgres:5432/auth
-    username: amigoscode
+    username: beval
   zipkin:
     base-url: http://zipkin:9411
 #  flyway:
@@ -23,5 +23,10 @@ eureka:
     enabled: true
 snowflake:
   workerId: 1
+springdoc:
+  api-docs:
+    path: /api/v1/auth/api-docs
+  swagger-ui:
+    path: /api/v1/auth/swagger-ui
 
 

@@ -20,6 +20,7 @@
         <module>privatewallet</module>
         <module>marketengine</module>
         <module>payment</module>
+        <module>ledger</module>
     </modules>
 
     <name>crypto212</name>
@@ -81,6 +82,11 @@
             <version>2.14.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.9</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -104,7 +110,9 @@
                     <version>3.1.4</version>
                     <configuration>
                         <from>
-                            <image>eclipse-temurin:17@sha256:2b47a8ea946ce1e5365a1562414ed576e378b7b670cadff3fb98ebecf2890cdc</image>
+                            <image>eclipse-temurin:17-jdk@sha256:5e71493375b09083fb49cbd17dabf3194e09e2b575c6f91a80a643cf511666b0</image>
+<!--                            <image>eclipse-temurin:17@sha256:2b47a8ea946ce1e5365a1562414ed576e378b7b670cadff3fb98ebecf2890cdc</image>-->
+<!--                            <image>amazoncorretto:latest@sha256:392eb90b5f1455578f513e127c599aa4410af0c05b12b81dc7856ee316ecd5d9</image>-->
                             <platforms>
                                 <platform>
                                     <architecture>arm64</architecture>
@@ -115,8 +123,20 @@
                                     <os>linux</os>
                                 </platform>
                             </platforms>
+                            <auth>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <username>${JIB_USERNAME}</username>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <password>${JIB_PASSWORD}</password>
+                            </auth>
                         </from>
                         <to>
+                            <auth>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <username>${JIB_USERNAME}</username>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <password>${JIB_PASSWORD}</password>
+                            </auth>
                             <tags>
                                 <tag>latest</tag>
                             </tags>

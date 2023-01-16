@@ -9,18 +9,10 @@ spring:
   datasource:
     password: password
     url: jdbc:postgresql://localhost:5432/auth
-    username: amigoscode
+    username: beval
     driver-class-name: org.postgresql.Driver
   zipkin:
     base-url: http://localhost:9411
-#  flyway:
-#    url: jdbc:postgresql://localhost:5432
-#    schemas: auth
-#    password: password
-#    user: amigoscode
-#    create-schemas: true
-#    default-schema: auth
-#    driver-class-name: org.postgresql.Driver
 eureka:
   client:
     service-url:
@@ -30,6 +22,10 @@ eureka:
     enabled: true
 snowflake:
   workerId: 1
-
+springdoc:
+  api-docs:
+    path: /api/v1/auth/api-docs
+  swagger-ui:
+    path: /api/v1/auth/swagger-ui
 
 

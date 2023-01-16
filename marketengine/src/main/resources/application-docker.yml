@@ -8,14 +8,8 @@ server:
 spring:
   application:
     name: marketengine
-#  datasource:
-#    password: password
-#    url: jdbc:postgresql://postgres:5432/marketengine
-#    username: amigoscode
   zipkin:
     base-url: http://zipkin:9411
-#  flyway:
-#      url: jdbc:postgresql://postgres:5432
 eureka:
   client:
     service-url:
@@ -25,5 +19,10 @@ eureka:
     enabled: true
 snowflake:
   workerId: 2
+springdoc:
+  api-docs:
+    path: /api/v1/market/api-docs
+  swagger-ui:
+    path: /api/v1/market/swagger-ui
 
 

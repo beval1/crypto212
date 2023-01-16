@@ -2,17 +2,16 @@ app:
   web3:
     network: "goerli"
     infura-api-key: ${INFURA_API_KEY}
+    wallet-private-key: ${WALLET_PRIVATE_KEY}
     wallet-address: "0x98c415A7dDF5D0ca01b391e1d2079ECeFC997539"
 server:
   port: 8087
 spring:
   application:
     name: privatewallet
-#  datasource:
-#    password: password
-#    url: jdbc:postgresql://localhost:5432/privatewallet
-#    username: amigoscode
-#    driver-class-name: org.postgresql.Driver
+  redis:
+    host: http://redis
+    port: 6379
   zipkin:
     base-url: http://zipkin:9411
 eureka:
@@ -22,4 +21,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     enabled: true
+springdoc:
+  api-docs:
+    path: /api/v1/privatewallet/api-docs
+  swagger-ui:
+    path: /api/v1/privatewallet/swagger-ui
 

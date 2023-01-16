@@ -9,11 +9,11 @@ server:
 spring:
   application:
     name: privatewallet
-#  datasource:
-#    password: password
-#    url: jdbc:postgresql://localhost:5432/privatewallet
-#    username: amigoscode
-#    driver-class-name: org.postgresql.Driver
+  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 0
+    url: redis://localhost:6379
   zipkin:
     base-url: http://localhost:9411
 eureka:
@@ -23,4 +23,11 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     enabled: true
-
+springdoc:
+  api-docs:
+    path: /api/v1/privatewallet/api-docs
+  swagger-ui:
+    path: /api/v1/privatewallet/swagger-ui
+#logging:
+#  level:
+#    root: debug

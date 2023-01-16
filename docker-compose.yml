@@ -3,7 +3,7 @@ services:
     container_name: postgres
     image: postgres
     environment:
-      POSTGRES_USER: amigoscode
+      POSTGRES_USER: beval
       POSTGRES_PASSWORD: password
       PGDATA: /data/postgres
     volumes:
@@ -13,6 +13,16 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  redis:
+    container_name: redis
+    image: redis:7.0.7-alpine
+    volumes:
+      - redis:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - redis
+    restart: always
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -65,36 +75,6 @@ services:
       - spring
     depends_on:
       - zipkin
-      - eureka-server
-  customer:
-    image: bobo91280/customer:latest
-    container_name: customer
-    ports:
-      - "8081:8081"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-      - postgres
-    depends_on:
-      - zipkin
-      - postgres
-      - rabbitmq
-      - eureka-server
-  fraud:
-    image: bobo91280/fraud:latest
-    container_name: fraud
-    ports:
-      - "8082:8082"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-      - postgres
-    depends_on:
-      - zipkin
-      - postgres
-      - rabbitmq
       - eureka-server
   notification:
     image: bobo91280/notification:latest
@@ -150,14 +130,14 @@ services:
       - "8087:8087"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - INFURA_API_KEY=KweQuxpkNvgYY65iChZJDnAnTm4lwEw8EjsVeojPXV4GAHey0daHmDT3DqUopGbY
+      - INFURA_API_KEY=9e8fb5a7f3a94455b583780bc41c1e4d;
+      - WALLET_PRIVATE_KEY=14f3d87a723fec7c6d6365547936b023b128b9289796332dcd8063ad380a0b7d
     networks:
       - spring
-      - postgres
+      - redis
     depends_on:
       - zipkin
-      - postgres
-      - rabbitmq
+      - redis
       - eureka-server
   userwallet:
     image: bobo91280/userwallet:latest
@@ -174,9 +154,26 @@ services:
       - postgres
       - rabbitmq
       - eureka-server
+  payment:
+    image: bobo91280/payment:latest
+    container_name: payment
+    ports:
+      - "8088:8088"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - STRIPE_API_KEY=pk_test_51MQG3ZH8G0pogQnMPW32jZr2frTIaRRfsKoJvZ0GEeyHuv8MjqJ1OofW6JRBMNMj1k3ZYlJIW6EImLWf6siJISzF00VxkhcJF2
+      - STRIPE_SECRET_KEY=sk_test_51MQG3ZH8G0pogQnMgZ06HnSil8vVsLjQPJDRwGTQTaO8JrTsMLB5ytuq7CKKuDWcJXcvu0IsEVZvMDw1YrcYKnIV00MriaNpWC
+      - STRIPE_WEBHOOK_SECRET=whsec_206b06b00de20e91a43aeb635e5b16275cd483bc87dca93d3d7871dab3f499d1
+    networks:
+      - spring
+    depends_on:
+      - zipkin
+      - eureka-server
 
 networks:
   postgres:
+    driver: bridge
+  redis:
     driver: bridge
   spring:
     driver: bridge
@@ -184,3 +181,4 @@ networks:
 volumes:
   postgres:
   pgadmin:
+  redis:

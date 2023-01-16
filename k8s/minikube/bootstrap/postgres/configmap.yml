@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: postgres-config
 data:
-  POSTGRES_DB: amigoscode
-  POSTGRES_USER: amigoscode
+  POSTGRES_DB: beval
+  POSTGRES_USER: beval
   POSTGRES_PASSWORD: password

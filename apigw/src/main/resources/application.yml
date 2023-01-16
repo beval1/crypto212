@@ -9,12 +9,6 @@ spring:
     cloud:
        gateway:
           routes:
-            - id: customer
-              uri: lb://CUSTOMER
-              predicates:
-                - Path=/api/v1/customers/**
-              filters:
-                - name: JwtAuthenticationFilter
             - id: auth
               uri: lb://AUTH
               predicates:
@@ -22,7 +16,21 @@ spring:
             - id: marketengine
               uri: lb://MARKETENGINE
               predicates:
-                - Path=/api/v1/market/candles/**
+                - Path=/api/v1/market/**
+              filters:
+                - name: JwtAuthenticationFilter
+            - id: userwallet
+              uri: lb://USERWALLET
+              predicates:
+                - Path=/api/v1/userwallet/**
+              filters:
+                - name: JwtAuthenticationFilter
+            - id: payment
+              uri: lb://PAYMENT
+              predicates:
+                - Path=/api/v1/payment/**
+              filters:
+                - name: JwtAuthenticationFilter
 
 eureka:
     client:

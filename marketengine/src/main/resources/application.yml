@@ -8,11 +8,6 @@ server:
 spring:
   application:
     name: marketengine
-#  datasource:
-#    password: password
-#    url: jdbc:postgresql://localhost:5432/marketengine
-#    username: amigoscode
-#    driver-class-name: org.postgresql.Driver
   zipkin:
     base-url: http://localhost:9411
 eureka:
@@ -24,6 +19,11 @@ eureka:
     enabled: true
 snowflake:
   workerId: 2
+springdoc:
+  api-docs:
+    path: /api/v1/market/api-docs
+  swagger-ui:
+    path: /api/v1/market/swagger-ui
 
 
 

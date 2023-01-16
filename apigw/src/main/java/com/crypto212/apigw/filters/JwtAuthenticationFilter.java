@@ -34,7 +34,9 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
 
             final List<String> apiEndpoints = List.of(
                     "/auth/sign-in",
-                    "/auth/sign-up"
+                    "/auth/sign-up",
+                    "swagger-ui",
+                    "api-docs"
             );
 
             Predicate<ServerHttpRequest> isApiSecured = r -> apiEndpoints.stream()

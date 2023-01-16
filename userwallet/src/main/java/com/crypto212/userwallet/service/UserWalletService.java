@@ -1,5 +1,6 @@
 package com.crypto212.userwallet.service;
 
+import com.crypto212.clients.ledger.LedgerClient;
 import com.crypto212.clients.privatewallet.PrivateWalletClient;
 import com.crypto212.shared.exception.ApiException;
 import com.crypto212.userwallet.repository.AssetRepository;
@@ -23,15 +24,17 @@ public class UserWalletService {
     private final TransactionTemplate transactionTemplate;
     private final AssetRepository assetRepository;
     private final PrivateWalletClient privateWalletClient;
+    private final LedgerClient ledgerClient;
 
     public UserWalletService(WalletRepository walletRepository, ModelMapper modelMapper,
                              TransactionTemplate transactionTemplate, AssetRepository assetRepository,
-                             PrivateWalletClient privateWalletClient) {
+                             PrivateWalletClient privateWalletClient, LedgerClient ledgerClient) {
         this.walletRepository = walletRepository;
         this.modelMapper = modelMapper;
         this.transactionTemplate = transactionTemplate;
         this.assetRepository = assetRepository;
         this.privateWalletClient = privateWalletClient;
+        this.ledgerClient = ledgerClient;
     }
 
     public WalletDTO getWallet(Long userId) {
@@ -74,11 +77,14 @@ public class UserWalletService {
         BigDecimal totalQuoteCurrencyUserAmount = assetRepository.getTotalAssetBalance(quoteCurrency);
         transactionTemplate.execute(status -> {
             walletRepository.updateUserAsset(walletId, baseCurrencyAsset.getAssetEntity().getId(), finalBaseCurrencyAmount);
-            walletRepository.updateUserAsset(walletId, quoteCurrencyAsset.getAssetEntity().getId(), finalQuoteCurrencyAmount);
             assetRepository.updateAssetBalance(baseCurrencyAsset.getAssetEntity().getId(),
                     totalBaseCurrencyUserAmount.add(amountToBuy));
+            ledgerClient.createTransaction(userId, "BUY_ORDER", walletId, baseCurrencyAmountToBuy, baseCurrency);
+
+            walletRepository.updateUserAsset(walletId, quoteCurrencyAsset.getAssetEntity().getId(), finalQuoteCurrencyAmount);
             assetRepository.updateAssetBalance(quoteCurrencyAsset.getAssetEntity().getId(),
                     totalQuoteCurrencyUserAmount.subtract(amountToSell));
+            ledgerClient.createTransaction(userId, "SELL_ORDER", walletId, quoteCurrencyAmountToSell, quoteCurrency);
             return status;
         });
     }
@@ -94,6 +100,7 @@ public class UserWalletService {
                     userCurrencyAsset.getAmount().add(new BigDecimal(amount)));
             assetRepository.updateAssetBalance(userCurrencyAsset.getAssetEntity().getId(),
                     totalCurrencyUserAmount.add(new BigDecimal(amount)));
+            ledgerClient.createTransaction(userId, "DEPOSIT", walletId, amount, assetSymbol);
             return status;
         });
     }
@@ -114,6 +121,7 @@ public class UserWalletService {
             //send withdraw request
             privateWalletClient.withdraw(assetSymbol, amount, toAddress);
             //TODO: update ledger
+            ledgerClient.createTransaction(userId, "WITHDRAW", walletId, amount, assetSymbol);
             return status;
         });
     }
